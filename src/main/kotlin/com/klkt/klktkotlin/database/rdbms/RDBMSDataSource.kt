@@ -1,4 +1,4 @@
-package com.klkt.klktkotlin.database
+package com.klkt.klktkotlin.database.rdbms
 
 import com.zaxxer.hikari.HikariDataSource
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration

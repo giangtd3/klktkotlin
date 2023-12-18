@@ -1,6 +1,6 @@
 package com.klkt.klktkotlin.database.impl
 
-import com.klkt.klktkotlin.database.RDBMSDataContext
+import com.klkt.klktkotlin.database.rdbms.RDBMSDataContext
 
 open class Ekttdevdb : RDBMSDataContext() {
 

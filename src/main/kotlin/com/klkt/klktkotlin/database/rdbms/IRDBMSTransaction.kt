@@ -1,4 +1,4 @@
-package com.klkt.klktkotlin.database
+package com.klkt.klktkotlin.database.rdbms
 
 import java.sql.Connection
 import java.sql.ResultSet

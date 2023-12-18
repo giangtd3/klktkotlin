@@ -1,7 +1,6 @@
-package com.klkt.klktkotlin.database
+package com.klkt.klktkotlin.database.rdbms
 
 import com.zaxxer.hikari.HikariConfig
-import com.zaxxer.hikari.HikariDataSource
 
 class RDBMSDataSourceInfo {
     var dbType: String = ""

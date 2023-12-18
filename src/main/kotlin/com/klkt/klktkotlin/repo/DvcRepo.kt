@@ -13,7 +13,7 @@ class DvcRepo: Ekttdevdb() {
                 "PKG_NMT___TRACUUGPLXCAPQUOCTE.SP_SEARCH_BY_SO_GPLX_AND_NOI_CAP_GPLX",
                 "P_SO_GPLX",
                 "P_NOI_CAP_GPLX"
-            )
+            ) as KLKTJsonObject
         } catch (e: Exception) {
             this.logger.error("ERROR:", e.printStackTrace())
         }

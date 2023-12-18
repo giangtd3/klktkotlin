@@ -1,4 +1,4 @@
-package com.klkt.klktkotlin.database
+package com.klkt.klktkotlin.database.rdbms
 
 import com.klkt.klktkotlin.utils.ContextUtils
 import utils.KLKTJsonObject
@@ -16,12 +16,6 @@ abstract class RDBMSDataContext : IRDBMSDataContext {
     protected lateinit var dbName: String
     protected lateinit var dbType: String
     protected lateinit var dbConn: Connection
-//    private lateinit var rdbmsDataSource: RDBMSDataSource
-//
-//    constructor(rdbmsDataSource: RDBMSDataSource){
-//        this.rdbmsDataSource = rdbmsDataSource
-//    }
-
     @Synchronized
     private fun getConn(): Connection {
         try {
@@ -36,7 +30,11 @@ abstract class RDBMSDataContext : IRDBMSDataContext {
         }
     }
 
-    override fun query(procedureOrSqlQuery: String, vararg params: Any): KLKTJsonObject {
+    override fun query(procedureOrSqlQuery: String, vararg params: Any, clazz: Class<Any>): Any {
+        TODO("Not yet implemented")
+    }
+
+    override fun query(procedureOrSqlQuery: String, vararg params: Any): Any {
         lateinit var re: ResultSet
         lateinit var pre: CallableStatement
         lateinit var conn: Connection
@@ -67,7 +65,7 @@ abstract class RDBMSDataContext : IRDBMSDataContext {
         return result
     }
 
-    override fun queryWithCommit(procedureOrSqlQuery: String, vararg params: Any): KLKTJsonObject {
+    override fun queryWithCommit(procedureOrSqlQuery: String, vararg params: Any): Any {
         lateinit var re: ResultSet
         lateinit var pre: CallableStatement
         lateinit var conn: Connection
@@ -154,6 +152,7 @@ abstract class RDBMSDataContext : IRDBMSDataContext {
             RDBMSUtils.close(pre, conn)
         }
     }
+
 
     private fun commit(conn: Connection) {
         try {
