@@ -1,0 +1,42 @@
+### 1.CONFIG: PORT, CONTEXT PATH ###
+#server.servlet.context-path: /zuul+
+server:
+   port: 8088
+   error:
+      include-message: always
+#   servlet:
+#      context-path: /new-root #thay đổi áấu hình root ứng dụng
+   enable-swagger: true
+   req-param-auth-tag: api_key, access_token
+   route:
+      jwt:
+         secret: 7xC01tFjh1&IoUcb #jwt chuoi bi mat
+
+spring:
+   jndi:
+      ignore: true #fix loi bao mat log4j
+
+###2.DB CONFIG ###
+datasources:
+   dbKttTest:
+      dbType: oracle
+      dbName: E_DVC
+      driverClassName: oracle.jdbc.OracleDriver
+      jdbcUrl: jdbc:oracle:thin:@10.0.227.31:1521:oradb01
+      username: E_DVC
+      password: Oracle123
+      maximumPoolSize: 10
+      minimumIdle: 10
+      poolName: db_oracle_e_ktt_dev
+      createPool: true
+   dbKttDev:
+      dbType: oracle
+      dbName: E_DVC
+      driverClassName: oracle.jdbc.OracleDriver
+      jdbcUrl: jdbc:oracle:thin:@10.0.227.31:1521:oradb01
+      username: E_DVC
+      password: Oracle123
+      maximumPoolSize: 10
+      minimumIdle: 10
+      poolName: db_oracle_e_ktt_test
+      createPool: true
