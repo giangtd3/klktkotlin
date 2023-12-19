@@ -8,11 +8,4 @@ import com.klkt.klktkotlin.database.rdbms.RDBMSDataContext
         this.dbType = "oracle"
         this.dbKey = "dbKttTest"
     }
-
-//    @Autowired
-//    constructor(rdbmsDataSource: RDBMSDataSource) : super(rdbmsDataSource) {
-//        this.dbName = "db_oracle_e_ktt_test"
-//        this.dbType = "oracle"
-//        this.dbKey = "dbKttTest"
-//    }
 }

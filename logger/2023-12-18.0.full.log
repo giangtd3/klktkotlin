@@ -1,0 +1,883 @@
+18/12/2023 21:08:49.049 WARN  [main] o.s.b.l.logback.LogbackLoggingSystem (initialize:136): Ignoring 'logback.configurationFile' system property. Please use 'logging.config' instead.
+18/12/2023 21:08:49.114 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarting:55): Starting KlktkotlinApplication.Companion using Java 1.8.0_202 on DESKTOP-K4TI3L5 with PID 22192 (E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main started by giangtd-pc in E:\Projects\KLKT\klktkotlin)
+18/12/2023 21:08:49.115 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStartupProfileInfo:632): No active profile set, falling back to 1 default profile: "default"
+18/12/2023 21:08:50.462 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (initialize:108): Tomcat initialized with port(s): 8088 (http)
+18/12/2023 21:08:50.468 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Initializing ProtocolHandler ["http-nio-8088"]
+18/12/2023 21:08:50.469 INFO  [main] o.a.catalina.core.StandardService (log:173): Starting service [Tomcat]
+18/12/2023 21:08:50.469 INFO  [main] o.a.catalina.core.StandardEngine (log:173): Starting Servlet engine: [Apache Tomcat/9.0.82]
+18/12/2023 21:08:50.592 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring embedded WebApplicationContext
+18/12/2023 21:08:50.592 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext (prepareWebApplicationContext:292): Root WebApplicationContext: initialization completed in 1423 ms
+18/12/2023 21:08:50.619 ERROR [main] o.s.b.w.e.tomcat.TomcatStarter (onStartup:61): Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'authTokenFilter': Unsatisfied dependency expressed through field 'jwtUtils'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtUtils' defined in file [E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main\com\klkt\klktkotlin\webapi\auth\security\JwtUtils.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.klkt.klktkotlin.webapi.auth.security.JwtUtils]: Constructor threw exception; nested exception is java.lang.NullPointerException
+18/12/2023 21:08:50.636 INFO  [main] o.a.catalina.core.StandardService (log:173): Stopping service [Tomcat]
+18/12/2023 21:08:50.669 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext (refresh:591): Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+18/12/2023 21:08:50.678 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener (logMessage:136): 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+18/12/2023 21:08:50.714 ERROR [main] o.s.boot.SpringApplication (reportFailure:818): Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
+	at com.klkt.klktkotlin.KlktkotlinApplication$Companion.main(KlktkotlinApplication.kt:50)
+	at com.klkt.klktkotlin.KlktkotlinApplication.main(KlktkotlinApplication.kt)
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:142)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:481)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:211)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:184)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	... 9 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authTokenFilter': Unsatisfied dependency expressed through field 'jwtUtils'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtUtils' defined in file [E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main\com\klkt\klktkotlin\webapi\auth\security\JwtUtils.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.klkt.klktkotlin.webapi.auth.security.JwtUtils]: Constructor threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:713)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:693)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:408)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:213)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:176)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:171)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:156)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:262)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:236)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4904)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:794)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:248)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:921)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:489)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	... 14 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtUtils' defined in file [E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main\com\klkt\klktkotlin\webapi\auth\security\JwtUtils.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.klkt.klktkotlin.webapi.auth.security.JwtUtils]: Constructor threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:310)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:710)
+	... 56 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.klkt.klktkotlin.webapi.auth.security.JwtUtils]: Constructor threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:117)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:306)
+	... 69 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at com.klkt.klktkotlin.webapi.auth.security.JwtUtils.<init>(JwtUtils.kt:21)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at kotlin.reflect.jvm.internal.calls.CallerImpl$Constructor.call(CallerImpl.kt:41)
+	at kotlin.reflect.jvm.internal.KCallableImpl.call(KCallableImpl.kt:108)
+	at kotlin.reflect.jvm.internal.KCallableImpl.callDefaultMethod$kotlin_reflection(KCallableImpl.kt:159)
+	at kotlin.reflect.jvm.internal.KCallableImpl.callBy(KCallableImpl.kt:112)
+	at org.springframework.beans.BeanUtils$KotlinDelegate.instantiateClass(BeanUtils.java:893)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:196)
+	... 71 common frames omitted
+18/12/2023 21:13:18.808 WARN  [main] o.s.b.l.logback.LogbackLoggingSystem (initialize:136): Ignoring 'logback.configurationFile' system property. Please use 'logging.config' instead.
+18/12/2023 21:13:18.869 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarting:55): Starting KlktkotlinApplication.Companion using Java 1.8.0_202 on DESKTOP-K4TI3L5 with PID 23592 (E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main started by giangtd-pc in E:\Projects\KLKT\klktkotlin)
+18/12/2023 21:13:18.870 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStartupProfileInfo:632): No active profile set, falling back to 1 default profile: "default"
+18/12/2023 21:13:20.142 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (initialize:108): Tomcat initialized with port(s): 8088 (http)
+18/12/2023 21:13:20.146 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Initializing ProtocolHandler ["http-nio-8088"]
+18/12/2023 21:13:20.147 INFO  [main] o.a.catalina.core.StandardService (log:173): Starting service [Tomcat]
+18/12/2023 21:13:20.148 INFO  [main] o.a.catalina.core.StandardEngine (log:173): Starting Servlet engine: [Apache Tomcat/9.0.82]
+18/12/2023 21:13:20.263 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring embedded WebApplicationContext
+18/12/2023 21:13:20.263 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext (prepareWebApplicationContext:292): Root WebApplicationContext: initialization completed in 1338 ms
+18/12/2023 21:13:20.278 ERROR [main] o.s.b.w.e.tomcat.TomcatStarter (onStartup:61): Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'authTokenFilter': Unsatisfied dependency expressed through field 'jwtUtils'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtUtils' defined in file [E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main\com\klkt\klktkotlin\webapi\auth\security\JwtUtils.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.klkt.klktkotlin.webapi.auth.security.JwtUtils]: Constructor threw exception; nested exception is java.lang.NullPointerException
+18/12/2023 21:13:20.293 INFO  [main] o.a.catalina.core.StandardService (log:173): Stopping service [Tomcat]
+18/12/2023 21:13:20.313 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext (refresh:591): Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+18/12/2023 21:13:20.321 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener (logMessage:136): 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+18/12/2023 21:13:20.339 ERROR [main] o.s.boot.SpringApplication (reportFailure:818): Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
+	at com.klkt.klktkotlin.KlktkotlinApplication$Companion.main(KlktkotlinApplication.kt:50)
+	at com.klkt.klktkotlin.KlktkotlinApplication.main(KlktkotlinApplication.kt)
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:142)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:481)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:211)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:184)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	... 9 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authTokenFilter': Unsatisfied dependency expressed through field 'jwtUtils'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtUtils' defined in file [E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main\com\klkt\klktkotlin\webapi\auth\security\JwtUtils.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.klkt.klktkotlin.webapi.auth.security.JwtUtils]: Constructor threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:713)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:693)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:408)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:213)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:176)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:171)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:156)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:262)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:236)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4904)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:794)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:248)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:921)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:489)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	... 14 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtUtils' defined in file [E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main\com\klkt\klktkotlin\webapi\auth\security\JwtUtils.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.klkt.klktkotlin.webapi.auth.security.JwtUtils]: Constructor threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:310)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:710)
+	... 56 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.klkt.klktkotlin.webapi.auth.security.JwtUtils]: Constructor threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:117)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:306)
+	... 69 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at com.klkt.klktkotlin.webapi.auth.security.JwtUtils.<init>(JwtUtils.kt:20)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at kotlin.reflect.jvm.internal.calls.CallerImpl$Constructor.call(CallerImpl.kt:41)
+	at kotlin.reflect.jvm.internal.KCallableImpl.call(KCallableImpl.kt:108)
+	at kotlin.reflect.jvm.internal.KCallableImpl.callDefaultMethod$kotlin_reflection(KCallableImpl.kt:159)
+	at kotlin.reflect.jvm.internal.KCallableImpl.callBy(KCallableImpl.kt:112)
+	at org.springframework.beans.BeanUtils$KotlinDelegate.instantiateClass(BeanUtils.java:893)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:196)
+	... 71 common frames omitted
+18/12/2023 21:14:14.962 WARN  [main] o.s.b.l.logback.LogbackLoggingSystem (initialize:136): Ignoring 'logback.configurationFile' system property. Please use 'logging.config' instead.
+18/12/2023 21:14:15.025 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarting:55): Starting KlktkotlinApplication.Companion using Java 1.8.0_202 on DESKTOP-K4TI3L5 with PID 22700 (E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main started by giangtd-pc in E:\Projects\KLKT\klktkotlin)
+18/12/2023 21:14:15.026 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStartupProfileInfo:632): No active profile set, falling back to 1 default profile: "default"
+18/12/2023 21:14:16.225 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (initialize:108): Tomcat initialized with port(s): 8088 (http)
+18/12/2023 21:14:16.231 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Initializing ProtocolHandler ["http-nio-8088"]
+18/12/2023 21:14:16.232 INFO  [main] o.a.catalina.core.StandardService (log:173): Starting service [Tomcat]
+18/12/2023 21:14:16.232 INFO  [main] o.a.catalina.core.StandardEngine (log:173): Starting Servlet engine: [Apache Tomcat/9.0.82]
+18/12/2023 21:14:16.381 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring embedded WebApplicationContext
+18/12/2023 21:14:16.382 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext (prepareWebApplicationContext:292): Root WebApplicationContext: initialization completed in 1302 ms
+18/12/2023 21:14:16.422 ERROR [main] o.s.b.w.e.tomcat.TomcatStarter (onStartup:61): Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'authTokenFilter': Unsatisfied dependency expressed through field 'jwtUtils'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtUtils' defined in file [E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main\com\klkt\klktkotlin\webapi\auth\security\JwtUtils.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.klkt.klktkotlin.webapi.auth.security.JwtUtils]: Constructor threw exception; nested exception is io.jsonwebtoken.security.WeakKeyException: The specified key byte array is 80 bits which is not secure enough for any JWT HMAC-SHA algorithm.  The JWT JWA Specification (RFC 7518, Section 3.2) states that keys used with HMAC-SHA algorithms MUST have a size >= 256 bits (the key size must be greater than or equal to the hash output size).  Consider using the Jwts.SIG.HS256.key() builder (or HS384.key() or HS512.key()) to create a key guaranteed to be secure enough for your preferred HMAC-SHA algorithm.  See https://tools.ietf.org/html/rfc7518#section-3.2 for more information.
+18/12/2023 21:14:16.441 INFO  [main] o.a.catalina.core.StandardService (log:173): Stopping service [Tomcat]
+18/12/2023 21:14:16.470 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext (refresh:591): Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+18/12/2023 21:14:16.480 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener (logMessage:136): 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+18/12/2023 21:14:16.505 ERROR [main] o.s.boot.SpringApplication (reportFailure:818): Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
+	at com.klkt.klktkotlin.KlktkotlinApplication$Companion.main(KlktkotlinApplication.kt:50)
+	at com.klkt.klktkotlin.KlktkotlinApplication.main(KlktkotlinApplication.kt)
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:142)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:481)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:211)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:184)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	... 9 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authTokenFilter': Unsatisfied dependency expressed through field 'jwtUtils'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtUtils' defined in file [E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main\com\klkt\klktkotlin\webapi\auth\security\JwtUtils.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.klkt.klktkotlin.webapi.auth.security.JwtUtils]: Constructor threw exception; nested exception is io.jsonwebtoken.security.WeakKeyException: The specified key byte array is 80 bits which is not secure enough for any JWT HMAC-SHA algorithm.  The JWT JWA Specification (RFC 7518, Section 3.2) states that keys used with HMAC-SHA algorithms MUST have a size >= 256 bits (the key size must be greater than or equal to the hash output size).  Consider using the Jwts.SIG.HS256.key() builder (or HS384.key() or HS512.key()) to create a key guaranteed to be secure enough for your preferred HMAC-SHA algorithm.  See https://tools.ietf.org/html/rfc7518#section-3.2 for more information.
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:713)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:693)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:408)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:213)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:176)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:171)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:156)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:262)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:236)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4904)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:794)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:248)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:921)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:489)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	... 14 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtUtils' defined in file [E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main\com\klkt\klktkotlin\webapi\auth\security\JwtUtils.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.klkt.klktkotlin.webapi.auth.security.JwtUtils]: Constructor threw exception; nested exception is io.jsonwebtoken.security.WeakKeyException: The specified key byte array is 80 bits which is not secure enough for any JWT HMAC-SHA algorithm.  The JWT JWA Specification (RFC 7518, Section 3.2) states that keys used with HMAC-SHA algorithms MUST have a size >= 256 bits (the key size must be greater than or equal to the hash output size).  Consider using the Jwts.SIG.HS256.key() builder (or HS384.key() or HS512.key()) to create a key guaranteed to be secure enough for your preferred HMAC-SHA algorithm.  See https://tools.ietf.org/html/rfc7518#section-3.2 for more information.
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:310)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:291)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:710)
+	... 56 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.klkt.klktkotlin.webapi.auth.security.JwtUtils]: Constructor threw exception; nested exception is io.jsonwebtoken.security.WeakKeyException: The specified key byte array is 80 bits which is not secure enough for any JWT HMAC-SHA algorithm.  The JWT JWA Specification (RFC 7518, Section 3.2) states that keys used with HMAC-SHA algorithms MUST have a size >= 256 bits (the key size must be greater than or equal to the hash output size).  Consider using the Jwts.SIG.HS256.key() builder (or HS384.key() or HS512.key()) to create a key guaranteed to be secure enough for your preferred HMAC-SHA algorithm.  See https://tools.ietf.org/html/rfc7518#section-3.2 for more information.
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:117)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:306)
+	... 69 common frames omitted
+Caused by: io.jsonwebtoken.security.WeakKeyException: The specified key byte array is 80 bits which is not secure enough for any JWT HMAC-SHA algorithm.  The JWT JWA Specification (RFC 7518, Section 3.2) states that keys used with HMAC-SHA algorithms MUST have a size >= 256 bits (the key size must be greater than or equal to the hash output size).  Consider using the Jwts.SIG.HS256.key() builder (or HS384.key() or HS512.key()) to create a key guaranteed to be secure enough for your preferred HMAC-SHA algorithm.  See https://tools.ietf.org/html/rfc7518#section-3.2 for more information.
+	at io.jsonwebtoken.security.Keys.hmacShaKeyFor(Keys.java:83)
+	at com.klkt.klktkotlin.webapi.auth.security.JwtUtils.<init>(JwtUtils.kt:17)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at kotlin.reflect.jvm.internal.calls.CallerImpl$Constructor.call(CallerImpl.kt:41)
+	at kotlin.reflect.jvm.internal.KCallableImpl.call(KCallableImpl.kt:108)
+	at kotlin.reflect.jvm.internal.KCallableImpl.callDefaultMethod$kotlin_reflection(KCallableImpl.kt:159)
+	at kotlin.reflect.jvm.internal.KCallableImpl.callBy(KCallableImpl.kt:112)
+	at org.springframework.beans.BeanUtils$KotlinDelegate.instantiateClass(BeanUtils.java:893)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:196)
+	... 71 common frames omitted
+18/12/2023 21:15:14.032 WARN  [main] o.s.b.l.logback.LogbackLoggingSystem (initialize:136): Ignoring 'logback.configurationFile' system property. Please use 'logging.config' instead.
+18/12/2023 21:15:14.086 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarting:55): Starting KlktkotlinApplication.Companion using Java 1.8.0_202 on DESKTOP-K4TI3L5 with PID 16284 (E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main started by giangtd-pc in E:\Projects\KLKT\klktkotlin)
+18/12/2023 21:15:14.087 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStartupProfileInfo:632): No active profile set, falling back to 1 default profile: "default"
+18/12/2023 21:15:15.372 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (initialize:108): Tomcat initialized with port(s): 8088 (http)
+18/12/2023 21:15:15.378 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Initializing ProtocolHandler ["http-nio-8088"]
+18/12/2023 21:15:15.379 INFO  [main] o.a.catalina.core.StandardService (log:173): Starting service [Tomcat]
+18/12/2023 21:15:15.380 INFO  [main] o.a.catalina.core.StandardEngine (log:173): Starting Servlet engine: [Apache Tomcat/9.0.82]
+18/12/2023 21:15:15.489 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring embedded WebApplicationContext
+18/12/2023 21:15:15.490 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext (prepareWebApplicationContext:292): Root WebApplicationContext: initialization completed in 1360 ms
+18/12/2023 21:15:15.508 ERROR [main] o.s.b.w.e.tomcat.TomcatStarter (onStartup:61): Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'authTokenFilter': Unsatisfied dependency expressed through field 'jwtUtils'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtUtils' defined in file [E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main\com\klkt\klktkotlin\webapi\auth\security\JwtUtils.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.klkt.klktkotlin.webapi.auth.security.JwtUtils]: Constructor threw exception; nested exception is java.lang.NullPointerException
+18/12/2023 21:15:15.520 INFO  [main] o.a.catalina.core.StandardService (log:173): Stopping service [Tomcat]
+18/12/2023 21:15:15.541 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext (refresh:591): Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+18/12/2023 21:15:15.548 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener (logMessage:136): 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+18/12/2023 21:15:15.570 ERROR [main] o.s.boot.SpringApplication (reportFailure:818): Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
+	at com.klkt.klktkotlin.KlktkotlinApplication$Companion.main(KlktkotlinApplication.kt:50)
+	at com.klkt.klktkotlin.KlktkotlinApplication.main(KlktkotlinApplication.kt)
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:142)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:481)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:211)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:184)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	... 9 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authTokenFilter': Unsatisfied dependency expressed through field 'jwtUtils'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtUtils' defined in file [E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main\com\klkt\klktkotlin\webapi\auth\security\JwtUtils.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.klkt.klktkotlin.webapi.auth.security.JwtUtils]: Constructor threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:713)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:693)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:408)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:213)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:176)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:171)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:156)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:262)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:236)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4904)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:794)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:248)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:921)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:489)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	... 14 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtUtils' defined in file [E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main\com\klkt\klktkotlin\webapi\auth\security\JwtUtils.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.klkt.klktkotlin.webapi.auth.security.JwtUtils]: Constructor threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:310)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:710)
+	... 56 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.klkt.klktkotlin.webapi.auth.security.JwtUtils]: Constructor threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:117)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:306)
+	... 69 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at com.klkt.klktkotlin.webapi.auth.security.JwtUtils.<init>(JwtUtils.kt:20)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at kotlin.reflect.jvm.internal.calls.CallerImpl$Constructor.call(CallerImpl.kt:41)
+	at kotlin.reflect.jvm.internal.KCallableImpl.call(KCallableImpl.kt:108)
+	at kotlin.reflect.jvm.internal.KCallableImpl.callDefaultMethod$kotlin_reflection(KCallableImpl.kt:159)
+	at kotlin.reflect.jvm.internal.KCallableImpl.callBy(KCallableImpl.kt:112)
+	at org.springframework.beans.BeanUtils$KotlinDelegate.instantiateClass(BeanUtils.java:893)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:196)
+	... 71 common frames omitted
+18/12/2023 21:16:59.040 WARN  [main] o.s.b.l.logback.LogbackLoggingSystem (initialize:136): Ignoring 'logback.configurationFile' system property. Please use 'logging.config' instead.
+18/12/2023 21:16:59.102 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarting:55): Starting KlktkotlinApplication.Companion using Java 1.8.0_202 on DESKTOP-K4TI3L5 with PID 19576 (E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main started by giangtd-pc in E:\Projects\KLKT\klktkotlin)
+18/12/2023 21:16:59.102 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStartupProfileInfo:632): No active profile set, falling back to 1 default profile: "default"
+18/12/2023 21:17:00.332 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (initialize:108): Tomcat initialized with port(s): 8088 (http)
+18/12/2023 21:17:00.336 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Initializing ProtocolHandler ["http-nio-8088"]
+18/12/2023 21:17:00.337 INFO  [main] o.a.catalina.core.StandardService (log:173): Starting service [Tomcat]
+18/12/2023 21:17:00.338 INFO  [main] o.a.catalina.core.StandardEngine (log:173): Starting Servlet engine: [Apache Tomcat/9.0.82]
+18/12/2023 21:17:00.489 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring embedded WebApplicationContext
+18/12/2023 21:17:00.490 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext (prepareWebApplicationContext:292): Root WebApplicationContext: initialization completed in 1345 ms
+18/12/2023 21:17:00.526 ERROR [main] o.s.b.w.e.tomcat.TomcatStarter (onStartup:61): Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'authTokenFilter': Unsatisfied dependency expressed through field 'jwtUtils'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtUtils' defined in file [E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main\com\klkt\klktkotlin\webapi\auth\security\JwtUtils.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.klkt.klktkotlin.webapi.auth.security.JwtUtils]: Constructor threw exception; nested exception is io.jsonwebtoken.security.WeakKeyException: The specified key byte array is 48 bits which is not secure enough for any JWT HMAC-SHA algorithm.  The JWT JWA Specification (RFC 7518, Section 3.2) states that keys used with HMAC-SHA algorithms MUST have a size >= 256 bits (the key size must be greater than or equal to the hash output size).  Consider using the Jwts.SIG.HS256.key() builder (or HS384.key() or HS512.key()) to create a key guaranteed to be secure enough for your preferred HMAC-SHA algorithm.  See https://tools.ietf.org/html/rfc7518#section-3.2 for more information.
+18/12/2023 21:17:00.548 INFO  [main] o.a.catalina.core.StandardService (log:173): Stopping service [Tomcat]
+18/12/2023 21:17:00.587 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext (refresh:591): Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+18/12/2023 21:17:00.598 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener (logMessage:136): 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+18/12/2023 21:17:00.622 ERROR [main] o.s.boot.SpringApplication (reportFailure:818): Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
+	at com.klkt.klktkotlin.KlktkotlinApplication$Companion.main(KlktkotlinApplication.kt:50)
+	at com.klkt.klktkotlin.KlktkotlinApplication.main(KlktkotlinApplication.kt)
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:142)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:481)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:211)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:184)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	... 9 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authTokenFilter': Unsatisfied dependency expressed through field 'jwtUtils'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtUtils' defined in file [E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main\com\klkt\klktkotlin\webapi\auth\security\JwtUtils.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.klkt.klktkotlin.webapi.auth.security.JwtUtils]: Constructor threw exception; nested exception is io.jsonwebtoken.security.WeakKeyException: The specified key byte array is 48 bits which is not secure enough for any JWT HMAC-SHA algorithm.  The JWT JWA Specification (RFC 7518, Section 3.2) states that keys used with HMAC-SHA algorithms MUST have a size >= 256 bits (the key size must be greater than or equal to the hash output size).  Consider using the Jwts.SIG.HS256.key() builder (or HS384.key() or HS512.key()) to create a key guaranteed to be secure enough for your preferred HMAC-SHA algorithm.  See https://tools.ietf.org/html/rfc7518#section-3.2 for more information.
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:713)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:693)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:408)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:213)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:176)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:171)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:156)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:262)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:236)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4904)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:794)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:248)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:921)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:489)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	... 14 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtUtils' defined in file [E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main\com\klkt\klktkotlin\webapi\auth\security\JwtUtils.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.klkt.klktkotlin.webapi.auth.security.JwtUtils]: Constructor threw exception; nested exception is io.jsonwebtoken.security.WeakKeyException: The specified key byte array is 48 bits which is not secure enough for any JWT HMAC-SHA algorithm.  The JWT JWA Specification (RFC 7518, Section 3.2) states that keys used with HMAC-SHA algorithms MUST have a size >= 256 bits (the key size must be greater than or equal to the hash output size).  Consider using the Jwts.SIG.HS256.key() builder (or HS384.key() or HS512.key()) to create a key guaranteed to be secure enough for your preferred HMAC-SHA algorithm.  See https://tools.ietf.org/html/rfc7518#section-3.2 for more information.
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:310)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:291)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:710)
+	... 56 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.klkt.klktkotlin.webapi.auth.security.JwtUtils]: Constructor threw exception; nested exception is io.jsonwebtoken.security.WeakKeyException: The specified key byte array is 48 bits which is not secure enough for any JWT HMAC-SHA algorithm.  The JWT JWA Specification (RFC 7518, Section 3.2) states that keys used with HMAC-SHA algorithms MUST have a size >= 256 bits (the key size must be greater than or equal to the hash output size).  Consider using the Jwts.SIG.HS256.key() builder (or HS384.key() or HS512.key()) to create a key guaranteed to be secure enough for your preferred HMAC-SHA algorithm.  See https://tools.ietf.org/html/rfc7518#section-3.2 for more information.
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:117)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:306)
+	... 69 common frames omitted
+Caused by: io.jsonwebtoken.security.WeakKeyException: The specified key byte array is 48 bits which is not secure enough for any JWT HMAC-SHA algorithm.  The JWT JWA Specification (RFC 7518, Section 3.2) states that keys used with HMAC-SHA algorithms MUST have a size >= 256 bits (the key size must be greater than or equal to the hash output size).  Consider using the Jwts.SIG.HS256.key() builder (or HS384.key() or HS512.key()) to create a key guaranteed to be secure enough for your preferred HMAC-SHA algorithm.  See https://tools.ietf.org/html/rfc7518#section-3.2 for more information.
+	at io.jsonwebtoken.security.Keys.hmacShaKeyFor(Keys.java:83)
+	at com.klkt.klktkotlin.webapi.auth.security.JwtUtils.<init>(JwtUtils.kt:17)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at kotlin.reflect.jvm.internal.calls.CallerImpl$Constructor.call(CallerImpl.kt:41)
+	at kotlin.reflect.jvm.internal.KCallableImpl.call(KCallableImpl.kt:108)
+	at kotlin.reflect.jvm.internal.KCallableImpl.callDefaultMethod$kotlin_reflection(KCallableImpl.kt:159)
+	at kotlin.reflect.jvm.internal.KCallableImpl.callBy(KCallableImpl.kt:112)
+	at org.springframework.beans.BeanUtils$KotlinDelegate.instantiateClass(BeanUtils.java:893)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:196)
+	... 71 common frames omitted
+18/12/2023 21:17:53.683 WARN  [main] o.s.b.l.logback.LogbackLoggingSystem (initialize:136): Ignoring 'logback.configurationFile' system property. Please use 'logging.config' instead.
+18/12/2023 21:17:53.737 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarting:55): Starting KlktkotlinApplication.Companion using Java 1.8.0_202 on DESKTOP-K4TI3L5 with PID 23688 (E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main started by giangtd-pc in E:\Projects\KLKT\klktkotlin)
+18/12/2023 21:17:53.738 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStartupProfileInfo:632): No active profile set, falling back to 1 default profile: "default"
+18/12/2023 21:17:54.960 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (initialize:108): Tomcat initialized with port(s): 8088 (http)
+18/12/2023 21:17:54.967 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Initializing ProtocolHandler ["http-nio-8088"]
+18/12/2023 21:17:54.969 INFO  [main] o.a.catalina.core.StandardService (log:173): Starting service [Tomcat]
+18/12/2023 21:17:54.969 INFO  [main] o.a.catalina.core.StandardEngine (log:173): Starting Servlet engine: [Apache Tomcat/9.0.82]
+18/12/2023 21:17:55.103 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring embedded WebApplicationContext
+18/12/2023 21:17:55.104 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext (prepareWebApplicationContext:292): Root WebApplicationContext: initialization completed in 1320 ms
+18/12/2023 21:17:55.203 ERROR [main] o.s.b.w.e.tomcat.TomcatStarter (onStartup:61): Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'authTokenFilter': Unsatisfied dependency expressed through field 'klktUserService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'KLKTUserService': Unsatisfied dependency expressed through field 'klktUserRepo'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'KLKTUserRepo' defined in file [E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main\com\klkt\klktkotlin\webapi\auth\repo\KLKTUserRepo.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig': Unsatisfied dependency expressed through field 'klktUserService'; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'KLKTUserService': Requested bean is currently in creation: Is there an unresolvable circular reference?
+18/12/2023 21:17:55.228 INFO  [main] o.a.catalina.core.StandardService (log:173): Stopping service [Tomcat]
+18/12/2023 21:17:55.257 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext (refresh:591): Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+18/12/2023 21:17:55.266 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener (logMessage:136): 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+18/12/2023 21:17:55.288 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter (report:40): 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+   authTokenFilter (field private final com.klkt.klktkotlin.webapi.auth.service.KLKTUserService com.klkt.klktkotlin.webapi.auth.security.AuthTokenFilter.klktUserService)
+┌─────┐
+|  KLKTUserService (field private com.klkt.klktkotlin.webapi.auth.repo.KLKTUserRepo com.klkt.klktkotlin.webapi.auth.service.KLKTUserService.klktUserRepo)
+↑     ↓
+|  KLKTUserRepo defined in file [E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main\com\klkt\klktkotlin\webapi\auth\repo\KLKTUserRepo.class]
+↑     ↓
+|  securityConfig (field private com.klkt.klktkotlin.webapi.auth.service.KLKTUserService com.klkt.klktkotlin.webapi.auth.security.SecurityConfig.klktUserService)
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+18/12/2023 21:19:01.349 WARN  [main] o.s.b.l.logback.LogbackLoggingSystem (initialize:136): Ignoring 'logback.configurationFile' system property. Please use 'logging.config' instead.
+18/12/2023 21:19:01.408 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarting:55): Starting KlktkotlinApplication.Companion using Java 1.8.0_202 on DESKTOP-K4TI3L5 with PID 10988 (E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main started by giangtd-pc in E:\Projects\KLKT\klktkotlin)
+18/12/2023 21:19:01.409 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStartupProfileInfo:632): No active profile set, falling back to 1 default profile: "default"
+18/12/2023 21:19:02.514 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (initialize:108): Tomcat initialized with port(s): 8088 (http)
+18/12/2023 21:19:02.520 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Initializing ProtocolHandler ["http-nio-8088"]
+18/12/2023 21:19:02.522 INFO  [main] o.a.catalina.core.StandardService (log:173): Starting service [Tomcat]
+18/12/2023 21:19:02.522 INFO  [main] o.a.catalina.core.StandardEngine (log:173): Starting Servlet engine: [Apache Tomcat/9.0.82]
+18/12/2023 21:19:02.710 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring embedded WebApplicationContext
+18/12/2023 21:19:02.711 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext (prepareWebApplicationContext:292): Root WebApplicationContext: initialization completed in 1252 ms
+18/12/2023 21:19:02.837 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_test - Starting...
+18/12/2023 21:19:03.409 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_test - Start completed.
+18/12/2023 21:19:03.409 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_dev - Starting...
+18/12/2023 21:19:03.520 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_dev - Start completed.
+18/12/2023 21:19:04.060 WARN  [main] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration (getOrDeducePassword:89): 
+
+Using generated security password: 8a88a8f5-b2cb-4005-8812-a6b8f4d7dc0b
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+18/12/2023 21:19:04.155 INFO  [main] o.s.s.web.DefaultSecurityFilterChain (<init>:55): Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@20c812c8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@71aaf151, org.springframework.security.web.context.SecurityContextPersistenceFilter@7ba93755, org.springframework.security.web.header.HeaderWriterFilter@7a687d8d, org.springframework.security.web.csrf.CsrfFilter@1f43cab7, org.springframework.security.web.authentication.logout.LogoutFilter@1084ac45, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6a6c7f42, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@19bedeb8, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@7061622, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1a01d7f0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@33e434c8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@664212ab, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@32d418a9, org.springframework.security.web.session.SessionManagementFilter@67eec8e1, org.springframework.security.web.access.ExceptionTranslationFilter@ca8ef3a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2839e3c8]
+18/12/2023 21:19:04.227 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Starting ProtocolHandler ["http-nio-8088"]
+18/12/2023 21:19:04.255 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (start:220): Tomcat started on port(s): 8088 (http) with context path ''
+18/12/2023 21:19:04.603 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarted:61): Started KlktkotlinApplication.Companion in 3.563 seconds (JVM running for 4.319)
+18/12/2023 21:19:04.608 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:40): HELLO MR.KHOAI!
+18/12/2023 21:19:04.609 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:42): Active profiles: []
+18/12/2023 22:11:36.127 WARN  [main] o.s.b.l.logback.LogbackLoggingSystem (initialize:136): Ignoring 'logback.configurationFile' system property. Please use 'logging.config' instead.
+18/12/2023 22:11:36.225 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarting:55): Starting KlktkotlinApplication.Companion using Java 1.8.0_202 on DESKTOP-K4TI3L5 with PID 23992 (E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main started by giangtd-pc in E:\Projects\KLKT\klktkotlin)
+18/12/2023 22:11:36.226 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStartupProfileInfo:632): No active profile set, falling back to 1 default profile: "default"
+18/12/2023 22:11:37.784 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (initialize:108): Tomcat initialized with port(s): 8088 (http)
+18/12/2023 22:11:37.790 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Initializing ProtocolHandler ["http-nio-8088"]
+18/12/2023 22:11:37.791 INFO  [main] o.a.catalina.core.StandardService (log:173): Starting service [Tomcat]
+18/12/2023 22:11:37.791 INFO  [main] o.a.catalina.core.StandardEngine (log:173): Starting Servlet engine: [Apache Tomcat/9.0.82]
+18/12/2023 22:11:37.972 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring embedded WebApplicationContext
+18/12/2023 22:11:37.972 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext (prepareWebApplicationContext:292): Root WebApplicationContext: initialization completed in 1628 ms
+18/12/2023 22:11:38.292 ERROR [main] o.s.b.w.e.tomcat.TomcatStarter (onStartup:61): Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthenticationFilter' defined in file [E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main\com\klkt\klktkotlin\webapi\auth\config\JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tokenService' defined in file [E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main\com\klkt\klktkotlin\webapi\auth\service\TokenService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwt-com.klkt.klktkotlin.webapi.auth.config.JwtProperties': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'java.lang.String' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+18/12/2023 22:11:38.312 INFO  [main] o.a.catalina.core.StandardService (log:173): Stopping service [Tomcat]
+18/12/2023 22:11:38.343 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext (refresh:591): Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+18/12/2023 22:11:38.354 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener (logMessage:136): 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+18/12/2023 22:11:38.372 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter (report:40): 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.klkt.klktkotlin.webapi.auth.config.JwtProperties required a bean of type 'java.lang.String' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'java.lang.String' in your configuration.
+
+18/12/2023 22:15:12.969 WARN  [main] o.s.b.l.logback.LogbackLoggingSystem (initialize:136): Ignoring 'logback.configurationFile' system property. Please use 'logging.config' instead.
+18/12/2023 22:15:13.055 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarting:55): Starting KlktkotlinApplication.Companion using Java 1.8.0_202 on DESKTOP-K4TI3L5 with PID 24500 (E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main started by giangtd-pc in E:\Projects\KLKT\klktkotlin)
+18/12/2023 22:15:13.056 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStartupProfileInfo:632): No active profile set, falling back to 1 default profile: "default"
+18/12/2023 22:15:14.633 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (initialize:108): Tomcat initialized with port(s): 8088 (http)
+18/12/2023 22:15:14.643 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Initializing ProtocolHandler ["http-nio-8088"]
+18/12/2023 22:15:14.644 INFO  [main] o.a.catalina.core.StandardService (log:173): Starting service [Tomcat]
+18/12/2023 22:15:14.645 INFO  [main] o.a.catalina.core.StandardEngine (log:173): Starting Servlet engine: [Apache Tomcat/9.0.82]
+18/12/2023 22:15:14.860 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring embedded WebApplicationContext
+18/12/2023 22:15:14.861 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext (prepareWebApplicationContext:292): Root WebApplicationContext: initialization completed in 1738 ms
+18/12/2023 22:15:15.315 ERROR [main] o.s.b.w.e.tomcat.TomcatStarter (onStartup:61): Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthenticationFilter' defined in file [E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main\com\klkt\klktkotlin\webapi\auth\config\JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tokenService' defined in file [E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main\com\klkt\klktkotlin\webapi\auth\service\TokenService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'jwt-com.klkt.klktkotlin.webapi.auth.config.JwtProperties': Could not bind properties to 'JwtProperties' : prefix=jwt, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'jwt' to com.klkt.klktkotlin.webapi.auth.config.JwtProperties
+18/12/2023 22:15:15.345 INFO  [main] o.a.catalina.core.StandardService (log:173): Stopping service [Tomcat]
+18/12/2023 22:15:15.378 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext (refresh:591): Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+18/12/2023 22:15:15.394 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener (logMessage:136): 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+18/12/2023 22:15:15.421 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter (report:40): 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'jwt' to com.klkt.klktkotlin.webapi.auth.config.JwtProperties:
+
+    Property: jwt.access-token-expiration
+    Value: "3600000"
+    Origin: URL [file:etc/application.yml] - 47:29
+    Reason: java.lang.IllegalStateException: No setter found for property: access-token-expiration
+
+Action:
+
+Update your application's configuration
+
+18/12/2023 22:15:59.634 WARN  [main] o.s.b.l.logback.LogbackLoggingSystem (initialize:136): Ignoring 'logback.configurationFile' system property. Please use 'logging.config' instead.
+18/12/2023 22:15:59.693 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarting:55): Starting KlktkotlinApplication.Companion using Java 1.8.0_202 on DESKTOP-K4TI3L5 with PID 6792 (E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main started by giangtd-pc in E:\Projects\KLKT\klktkotlin)
+18/12/2023 22:15:59.695 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStartupProfileInfo:632): No active profile set, falling back to 1 default profile: "default"
+18/12/2023 22:16:00.978 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (initialize:108): Tomcat initialized with port(s): 8088 (http)
+18/12/2023 22:16:00.986 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Initializing ProtocolHandler ["http-nio-8088"]
+18/12/2023 22:16:00.988 INFO  [main] o.a.catalina.core.StandardService (log:173): Starting service [Tomcat]
+18/12/2023 22:16:00.988 INFO  [main] o.a.catalina.core.StandardEngine (log:173): Starting Servlet engine: [Apache Tomcat/9.0.82]
+18/12/2023 22:16:01.220 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring embedded WebApplicationContext
+18/12/2023 22:16:01.221 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext (prepareWebApplicationContext:292): Root WebApplicationContext: initialization completed in 1470 ms
+18/12/2023 22:16:01.670 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_test - Starting...
+18/12/2023 22:16:02.304 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_test - Start completed.
+18/12/2023 22:16:02.305 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_dev - Starting...
+18/12/2023 22:16:02.406 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_dev - Start completed.
+18/12/2023 22:16:02.470 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext (refresh:591): Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController' defined in file [E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main\com\klkt\klktkotlin\webapi\auth\controller\AuthController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.klkt.klktkotlin.webapi.auth.service.AuthenticationService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+18/12/2023 22:16:02.472 INFO  [main] o.a.catalina.core.StandardService (log:173): Stopping service [Tomcat]
+18/12/2023 22:16:02.485 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener (logMessage:136): 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+18/12/2023 22:16:02.506 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter (report:40): 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.klkt.klktkotlin.webapi.auth.controller.AuthController required a bean of type 'com.klkt.klktkotlin.webapi.auth.service.AuthenticationService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.klkt.klktkotlin.webapi.auth.service.AuthenticationService' in your configuration.
+
+18/12/2023 22:17:25.658 WARN  [main] o.s.b.l.logback.LogbackLoggingSystem (initialize:136): Ignoring 'logback.configurationFile' system property. Please use 'logging.config' instead.
+18/12/2023 22:17:25.709 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarting:55): Starting KlktkotlinApplication.Companion using Java 1.8.0_202 on DESKTOP-K4TI3L5 with PID 18584 (E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main started by giangtd-pc in E:\Projects\KLKT\klktkotlin)
+18/12/2023 22:17:25.710 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStartupProfileInfo:632): No active profile set, falling back to 1 default profile: "default"
+18/12/2023 22:17:27.115 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (initialize:108): Tomcat initialized with port(s): 8088 (http)
+18/12/2023 22:17:27.119 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Initializing ProtocolHandler ["http-nio-8088"]
+18/12/2023 22:17:27.120 INFO  [main] o.a.catalina.core.StandardService (log:173): Starting service [Tomcat]
+18/12/2023 22:17:27.121 INFO  [main] o.a.catalina.core.StandardEngine (log:173): Starting Servlet engine: [Apache Tomcat/9.0.82]
+18/12/2023 22:17:27.316 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring embedded WebApplicationContext
+18/12/2023 22:17:27.316 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext (prepareWebApplicationContext:292): Root WebApplicationContext: initialization completed in 1552 ms
+18/12/2023 22:17:27.767 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_test - Starting...
+18/12/2023 22:17:28.394 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_test - Start completed.
+18/12/2023 22:17:28.396 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_dev - Starting...
+18/12/2023 22:17:28.504 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_dev - Start completed.
+18/12/2023 22:17:29.091 INFO  [main] o.s.s.web.DefaultSecurityFilterChain (<init>:55): Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@79eeff87, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6b4fc2d1, org.springframework.security.web.context.SecurityContextPersistenceFilter@47148f3f, org.springframework.security.web.header.HeaderWriterFilter@4f169009, org.springframework.security.web.authentication.logout.LogoutFilter@fe09383, com.klkt.klktkotlin.webapi.auth.config.JwtAuthenticationFilter@12968227, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1200458e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5af64ce0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@8bd076a, org.springframework.security.web.session.SessionManagementFilter@217c23ce, org.springframework.security.web.access.ExceptionTranslationFilter@2cd388f5, org.springframework.security.web.access.intercept.AuthorizationFilter@3b7c80c6]
+18/12/2023 22:17:29.190 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Starting ProtocolHandler ["http-nio-8088"]
+18/12/2023 22:17:29.202 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (start:220): Tomcat started on port(s): 8088 (http) with context path ''
+18/12/2023 22:17:29.398 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarted:61): Started KlktkotlinApplication.Companion in 4.155 seconds (JVM running for 4.979)
+18/12/2023 22:17:29.402 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:40): HELLO MR.KHOAI!
+18/12/2023 22:17:29.402 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:42): Active profiles: []
+18/12/2023 22:20:41.595 INFO  [http-nio-8088-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring DispatcherServlet 'dispatcherServlet'
+18/12/2023 22:20:41.595 INFO  [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet (initServletBean:525): Initializing Servlet 'dispatcherServlet'
+18/12/2023 22:20:41.597 INFO  [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet (initServletBean:547): Completed initialization in 2 ms
+18/12/2023 22:20:41.701 ERROR [http-nio-8088-exec-2] o.a.c.c.C.[.[.[.[dispatcherServlet] (log:175): Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.http.converter.HttpMessageConversionException: Type definition error: [simple type, class utils.KLKTJsonObject]; nested exception is com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Cannot construct instance of `utils.KLKTJsonObject` (no Creators, like default constructor, exist): cannot deserialize from Object value (no delegate- or property-based Creator)
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 2, column: 2]] with root cause
+com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Cannot construct instance of `utils.KLKTJsonObject` (no Creators, like default constructor, exist): cannot deserialize from Object value (no delegate- or property-based Creator)
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 2, column: 2]
+	at com.fasterxml.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:67)
+	at com.fasterxml.jackson.databind.DeserializationContext.reportBadDefinition(DeserializationContext.java:1904)
+	at com.fasterxml.jackson.databind.DatabindContext.reportBadDefinition(DatabindContext.java:400)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleMissingInstantiator(DeserializationContext.java:1349)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1415)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:352)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:185)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4674)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3682)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:380)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:343)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:185)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:160)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:133)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:96)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at com.klkt.klktkotlin.webapi.auth.config.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.kt:28)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+18/12/2023 22:24:11.622 WARN  [main] o.s.b.l.logback.LogbackLoggingSystem (initialize:136): Ignoring 'logback.configurationFile' system property. Please use 'logging.config' instead.
+18/12/2023 22:24:11.710 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarting:55): Starting KlktkotlinApplication.Companion using Java 1.8.0_202 on DESKTOP-K4TI3L5 with PID 10228 (E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main started by giangtd-pc in E:\Projects\KLKT\klktkotlin)
+18/12/2023 22:24:11.712 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStartupProfileInfo:632): No active profile set, falling back to 1 default profile: "default"
+18/12/2023 22:24:13.068 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (initialize:108): Tomcat initialized with port(s): 8088 (http)
+18/12/2023 22:24:13.074 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Initializing ProtocolHandler ["http-nio-8088"]
+18/12/2023 22:24:13.075 INFO  [main] o.a.catalina.core.StandardService (log:173): Starting service [Tomcat]
+18/12/2023 22:24:13.075 INFO  [main] o.a.catalina.core.StandardEngine (log:173): Starting Servlet engine: [Apache Tomcat/9.0.82]
+18/12/2023 22:24:13.346 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring embedded WebApplicationContext
+18/12/2023 22:24:13.346 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext (prepareWebApplicationContext:292): Root WebApplicationContext: initialization completed in 1564 ms
+18/12/2023 22:24:13.881 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_test - Starting...
+18/12/2023 22:24:14.525 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_test - Start completed.
+18/12/2023 22:24:14.526 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_dev - Starting...
+18/12/2023 22:24:14.639 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_dev - Start completed.
+18/12/2023 22:24:15.220 INFO  [main] o.s.s.web.DefaultSecurityFilterChain (<init>:55): Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@79eeff87, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6b4fc2d1, org.springframework.security.web.context.SecurityContextPersistenceFilter@47148f3f, org.springframework.security.web.header.HeaderWriterFilter@4f169009, org.springframework.security.web.authentication.logout.LogoutFilter@fe09383, com.klkt.klktkotlin.webapi.auth.config.JwtAuthenticationFilter@12968227, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1200458e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5af64ce0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@8bd076a, org.springframework.security.web.session.SessionManagementFilter@217c23ce, org.springframework.security.web.access.ExceptionTranslationFilter@2cd388f5, org.springframework.security.web.access.intercept.AuthorizationFilter@3b7c80c6]
+18/12/2023 22:24:15.337 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Starting ProtocolHandler ["http-nio-8088"]
+18/12/2023 22:24:15.354 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (start:220): Tomcat started on port(s): 8088 (http) with context path ''
+18/12/2023 22:24:15.567 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarted:61): Started KlktkotlinApplication.Companion in 4.422 seconds (JVM running for 5.329)
+18/12/2023 22:24:15.570 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:40): HELLO MR.KHOAI!
+18/12/2023 22:24:15.571 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:42): Active profiles: []
+18/12/2023 22:24:30.710 INFO  [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring DispatcherServlet 'dispatcherServlet'
+18/12/2023 22:24:30.710 INFO  [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet (initServletBean:525): Initializing Servlet 'dispatcherServlet'
+18/12/2023 22:24:30.713 INFO  [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet (initServletBean:547): Completed initialization in 3 ms
+18/12/2023 22:26:47.753 INFO  [http-nio-8088-exec-7] c.k.klktkotlin.webapi.DvcController (getData:41): objInput Dev: {"name":"Add your name in the body"}
+18/12/2023 22:28:27.713 WARN  [http-nio-8088-exec-10] o.s.web.servlet.PageNotFound (noHandlerFound:1283): No mapping for POST /api/refresh
+18/12/2023 22:28:57.212 INFO  [http-nio-8088-exec-1] c.k.klktkotlin.webapi.DvcController (getData:41): objInput Dev: {"name":"Add your name in the body"}
+18/12/2023 22:29:07.773 INFO  [http-nio-8088-exec-5] c.k.klktkotlin.webapi.DvcController (getData:41): objInput Dev: {"name":"Add your name in the body"}
+18/12/2023 22:29:19.153 INFO  [http-nio-8088-exec-4] c.k.klktkotlin.webapi.DvcController (getData:41): objInput Dev: {"name":"Add your name in the body"}
