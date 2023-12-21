@@ -1,7 +1,7 @@
 package com.klkt.klktkotlin.repo
 
 import com.klkt.klktkotlin.database.impl.Ekttdevdb
-import utils.KLKTJsonObject
+import KLKTJavaUtils.KLKTJsonObject
 import org.springframework.stereotype.Repository
 
 @Repository

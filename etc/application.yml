@@ -40,6 +40,17 @@ datasources:
       minimumIdle: 10
       poolName: db_oracle_e_ktt_test
       createPool: true
+   dbttsh:
+      dbType: postgres
+      dbName: mot_ttsh_dev
+      driverClassName: org.postgresql.Driver
+      jdbcUrl: jdbc:postgresql://10.0.227.30:5432/mot_ttsh_dev?prepareThreshold=0
+      username: ttsh_dev
+      password: TTSH#123456
+      maximumPoolSize: 10
+      minimumIdle: 10
+      poolName: db_postgres_ttsh_dev
+      createPool: true
 
 ##3. Auth:
 jwt:

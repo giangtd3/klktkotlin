@@ -1,4 +1,4 @@
-package utils;
+package KLKTJavaUtils;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -7,7 +7,7 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.JsonNodeFactory;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import com.klkt.klktkotlinapi.klktutils.StringUtils;
+import com.klkt.klktkotlin.utils.KLKTStringUtils;
 
 import java.io.File;
 import java.math.BigDecimal;
@@ -142,7 +142,7 @@ public class JsUtils {
             }
             return;
         }
-        if (StringUtils.Companion.isEmpty(keyName)) {
+        if (KLKTStringUtils.Companion.isEmpty(keyName)) {
             return;
         }
         final ObjectNode jNode = (ObjectNode)js;

@@ -1,6 +1,6 @@
 package com.klkt.klktkotlin.database.rdbms
 
-import utils.KLKTJsonObject
+import KLKTJavaUtils.KLKTJsonObject
 import java.sql.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -17,7 +17,7 @@ class RDBMSUtils {
         fun buildStoreExec(procedureOrSqlQuery: String, paramSize: Int, resCursor: Boolean): String? {
 
             if (procedureOrSqlQuery.contentEquals("(")) {
-                return "{call $procedureOrSqlQuery }"
+                return "call $procedureOrSqlQuery "
             }
             val br = StringBuffer()
             if (resCursor) {
@@ -34,7 +34,7 @@ class RDBMSUtils {
                     br.append("?")
                 } while (j < paramSize)
             }
-            return "{call " + procedureOrSqlQuery + '(' + br as Any + ") }"
+            return "call " + procedureOrSqlQuery + '(' + br as Any + ") "
         }
 
         fun <T : AutoCloseable> close(vararg obj: T) {

@@ -55,6 +55,11 @@ dependencies {
             ,'io.jsonwebtoken:jjwt-jackson:0.12.3'
             ,'org.springframework.boot:spring-boot-starter-security'
             ,'org.springframework.security:spring-security-test'
+            // https://mvnrepository.com/artifact/org.danilopianini/khttp
+            //https://khttp.readthedocs.io/en/latest/
+            //https://www.baeldung.com/kotlin/khttp
+            , 'org.danilopianini:khttp:1.4.2'
+
 
     )
 }

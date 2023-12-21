@@ -1,7 +1,7 @@
 package com.klkt.klktkotlin.database.rdbms
 
 import com.klkt.klktkotlin.utils.ContextUtils
-import utils.KLKTJsonObject
+import KLKTJavaUtils.KLKTJsonObject
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import java.sql.CallableStatement
@@ -79,20 +79,23 @@ abstract class RDBMSDataContext : IRDBMSDataContext {
                 re = pre.executeQuery()
                 this.commit(conn)
             } else {
-                pre = conn.prepareCall(
-                    RDBMSUtils.buildStoreExec(
+                val spText = RDBMSUtils.buildStoreExec(
                         procedureOrSqlQuery,
                         params.size,
                         true
-                    )
                 )
-                pre.registerOutParameter(params.size + 1, -10)
+                logger.info("spText: {}", spText)
+
+                pre = conn.prepareCall(spText)
+                pre.registerOutParameter(params.size + 1, java.sql.Types.REF_CURSOR)
                 RDBMSUtils.addParam(pre, params)
                 pre.execute()
                 this.commit(conn)
                 re = pre.getObject(params.size + 1) as ResultSet
             }
             RDBMSUtils.parseResultSetData(re, result)
+        }catch (e: Exception) {
+            logger.error("queryWithCommit exception: {}", e)
         } finally {
             RDBMSUtils.close(re, pre, conn)
         }

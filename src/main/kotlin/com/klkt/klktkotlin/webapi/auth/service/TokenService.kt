@@ -37,6 +37,7 @@ class TokenService(jwtProperties: JwtProperties) {
         return userDetails.username == email && !isExpired(token)
     }
 
+    @Throws
     fun extractUsername(token: String): String? {
         val claims: Claims? = getAllClaims(token)
         if (claims != null) {
@@ -55,6 +56,7 @@ class TokenService(jwtProperties: JwtProperties) {
     }
 
 
+    @Throws
     private fun getAllClaims(token: String): Claims? {
 
         val parser = Jwts.parser()

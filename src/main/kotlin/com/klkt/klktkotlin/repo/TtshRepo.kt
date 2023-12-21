@@ -1,18 +1,17 @@
 package com.klkt.klktkotlin.repo
 
-import com.klkt.klktkotlin.database.impl.Ektttestdb
-import KLKTJavaUtils.KLKTJsonObject
+import com.klkt.klktkotlin.database.impl.Ettshdevdb
 import org.springframework.stereotype.Repository
+import KLKTJavaUtils.KLKTJsonObject
 
 @Repository
-class DvcTestRepo: Ektttestdb() {
+class TtshRepo:Ettshdevdb() {
     fun getData(): KLKTJsonObject {
         var rs: KLKTJsonObject = KLKTJsonObject.newArr()
         try {
-            rs = this.query(
-                "PKG_NMT___TRACUUGPLXCAPQUOCTE.SP_SEARCH_BY_SO_GPLX_AND_NOI_CAP_GPLX",
-                "P_SO_GPLX",
-                "P_NOI_CAP_GPLX"
+            rs = this.queryWithCommit(
+                    "pkg_auth_user___findbyid",
+                    "cuongtm"
             ) as KLKTJsonObject
         } catch (e: Exception) {
             this.logger.error("ERROR:", e.printStackTrace())

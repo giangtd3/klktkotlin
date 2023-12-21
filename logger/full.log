@@ -1,395 +1,662 @@
-19/12/2023 10:41:37.388 WARN  [main] o.s.b.l.logback.LogbackLoggingSystem (initialize:136): Ignoring 'logback.configurationFile' system property. Please use 'logging.config' instead.
-19/12/2023 10:41:37.442 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarting:55): Starting KlktkotlinApplication.Companion using Java 1.8.0_202 on DESKTOP-K4TI3L5 with PID 23760 (E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main started by giangtd-pc in E:\Projects\KLKT\klktkotlin)
-19/12/2023 10:41:37.443 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStartupProfileInfo:632): No active profile set, falling back to 1 default profile: "default"
-19/12/2023 10:41:37.694 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext (refresh:591): Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.klkt.klktkotlin.KlktkotlinApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'userService' for bean class [com.klkt.klktkotlin.webapi.auth.service.UserService] conflicts with existing, non-compatible bean definition of same name and class [com.klkt.klktkotlin.authen.service.UserService]
-19/12/2023 10:41:37.899 ERROR [main] o.s.boot.SpringApplication (reportFailure:818): Application run failed
-org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.klkt.klktkotlin.KlktkotlinApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'userService' for bean class [com.klkt.klktkotlin.webapi.auth.service.UserService] conflicts with existing, non-compatible bean definition of same name and class [com.klkt.klktkotlin.authen.service.UserService]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:188)
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331)
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:748)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
-	at com.klkt.klktkotlin.KlktkotlinApplication$Companion.main(KlktkotlinApplication.kt:50)
-	at com.klkt.klktkotlin.KlktkotlinApplication.main(KlktkotlinApplication.kt)
-Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'userService' for bean class [com.klkt.klktkotlin.webapi.auth.service.UserService] conflicts with existing, non-compatible bean definition of same name and class [com.klkt.klktkotlin.authen.service.UserService]
-	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:349)
-	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:287)
-	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128)
-	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:295)
-	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249)
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:206)
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:174)
-	... 14 common frames omitted
-19/12/2023 10:42:27.283 WARN  [main] o.s.b.l.logback.LogbackLoggingSystem (initialize:136): Ignoring 'logback.configurationFile' system property. Please use 'logging.config' instead.
-19/12/2023 10:42:27.347 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarting:55): Starting KlktkotlinApplication.Companion using Java 1.8.0_202 on DESKTOP-K4TI3L5 with PID 10604 (E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main started by giangtd-pc in E:\Projects\KLKT\klktkotlin)
-19/12/2023 10:42:27.349 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStartupProfileInfo:632): No active profile set, falling back to 1 default profile: "default"
-19/12/2023 10:42:28.756 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (initialize:108): Tomcat initialized with port(s): 8088 (http)
-19/12/2023 10:42:28.761 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Initializing ProtocolHandler ["http-nio-8088"]
-19/12/2023 10:42:28.762 INFO  [main] o.a.catalina.core.StandardService (log:173): Starting service [Tomcat]
-19/12/2023 10:42:28.763 INFO  [main] o.a.catalina.core.StandardEngine (log:173): Starting Servlet engine: [Apache Tomcat/9.0.82]
-19/12/2023 10:42:28.884 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring embedded WebApplicationContext
-19/12/2023 10:42:28.885 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext (prepareWebApplicationContext:292): Root WebApplicationContext: initialization completed in 1471 ms
-19/12/2023 10:42:28.911 ERROR [main] o.s.b.w.e.tomcat.TomcatStarter (onStartup:61): Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'authenFilter': Unsatisfied dependency expressed through field 'jwtUtils'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtToken' defined in file [E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main\com\klkt\klktkotlin\authen\security\JwtToken.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.klkt.klktkotlin.authen.security.JwtToken]: Constructor threw exception; nested exception is java.lang.NullPointerException
-19/12/2023 10:42:28.927 INFO  [main] o.a.catalina.core.StandardService (log:173): Stopping service [Tomcat]
-19/12/2023 10:42:28.956 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext (refresh:591): Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
-19/12/2023 10:42:28.964 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener (logMessage:136): 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-19/12/2023 10:42:28.988 ERROR [main] o.s.boot.SpringApplication (reportFailure:818): Application run failed
-org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
-	at com.klkt.klktkotlin.KlktkotlinApplication$Companion.main(KlktkotlinApplication.kt:50)
-	at com.klkt.klktkotlin.KlktkotlinApplication.main(KlktkotlinApplication.kt)
-Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:142)
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
-	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:481)
-	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:211)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:184)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
-	... 9 common frames omitted
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authenFilter': Unsatisfied dependency expressed through field 'jwtUtils'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtToken' defined in file [E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main\com\klkt\klktkotlin\authen\security\JwtToken.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.klkt.klktkotlin.authen.security.JwtToken]: Constructor threw exception; nested exception is java.lang.NullPointerException
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:713)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:693)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:408)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:213)
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:176)
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:171)
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:156)
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:262)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:236)
-	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53)
-	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4904)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
-	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
-	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:794)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
-	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
-	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:248)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
-	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
-	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:921)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
-	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:489)
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
-	... 14 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtToken' defined in file [E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main\com\klkt\klktkotlin\authen\security\JwtToken.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.klkt.klktkotlin.authen.security.JwtToken]: Constructor threw exception; nested exception is java.lang.NullPointerException
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:310)
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:176)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:710)
-	... 56 common frames omitted
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.klkt.klktkotlin.authen.security.JwtToken]: Constructor threw exception; nested exception is java.lang.NullPointerException
-	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224)
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:117)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:306)
-	... 69 common frames omitted
-Caused by: java.lang.NullPointerException: null
-	at com.klkt.klktkotlin.authen.security.JwtToken.<init>(JwtToken.kt:30)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at kotlin.reflect.jvm.internal.calls.CallerImpl$Constructor.call(CallerImpl.kt:41)
-	at kotlin.reflect.jvm.internal.KCallableImpl.call(KCallableImpl.kt:108)
-	at kotlin.reflect.jvm.internal.KCallableImpl.callDefaultMethod$kotlin_reflection(KCallableImpl.kt:159)
-	at kotlin.reflect.jvm.internal.KCallableImpl.callBy(KCallableImpl.kt:112)
-	at org.springframework.beans.BeanUtils$KotlinDelegate.instantiateClass(BeanUtils.java:893)
-	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:196)
-	... 71 common frames omitted
-19/12/2023 10:43:12.496 WARN  [main] o.s.b.l.logback.LogbackLoggingSystem (initialize:136): Ignoring 'logback.configurationFile' system property. Please use 'logging.config' instead.
-19/12/2023 10:43:12.549 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarting:55): Starting KlktkotlinApplication.Companion using Java 1.8.0_202 on DESKTOP-K4TI3L5 with PID 23604 (E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main started by giangtd-pc in E:\Projects\KLKT\klktkotlin)
-19/12/2023 10:43:12.549 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStartupProfileInfo:632): No active profile set, falling back to 1 default profile: "default"
-19/12/2023 10:43:13.725 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (initialize:108): Tomcat initialized with port(s): 8088 (http)
-19/12/2023 10:43:13.730 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Initializing ProtocolHandler ["http-nio-8088"]
-19/12/2023 10:43:13.731 INFO  [main] o.a.catalina.core.StandardService (log:173): Starting service [Tomcat]
-19/12/2023 10:43:13.731 INFO  [main] o.a.catalina.core.StandardEngine (log:173): Starting Servlet engine: [Apache Tomcat/9.0.82]
-19/12/2023 10:43:13.838 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring embedded WebApplicationContext
-19/12/2023 10:43:13.838 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext (prepareWebApplicationContext:292): Root WebApplicationContext: initialization completed in 1235 ms
-19/12/2023 10:43:13.858 ERROR [main] o.s.b.w.e.tomcat.TomcatStarter (onStartup:61): Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'authenFilter': Unsatisfied dependency expressed through field 'jwtUtils'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtToken' defined in file [E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main\com\klkt\klktkotlin\authen\security\JwtToken.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.klkt.klktkotlin.authen.security.JwtToken]: Constructor threw exception; nested exception is java.lang.NullPointerException
-19/12/2023 10:43:13.872 INFO  [main] o.a.catalina.core.StandardService (log:173): Stopping service [Tomcat]
-19/12/2023 10:43:13.893 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext (refresh:591): Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
-19/12/2023 10:43:13.899 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener (logMessage:136): 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-19/12/2023 10:43:13.917 ERROR [main] o.s.boot.SpringApplication (reportFailure:818): Application run failed
-org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
-	at com.klkt.klktkotlin.KlktkotlinApplication$Companion.main(KlktkotlinApplication.kt:50)
-	at com.klkt.klktkotlin.KlktkotlinApplication.main(KlktkotlinApplication.kt)
-Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:142)
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
-	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:481)
-	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:211)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:184)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
-	... 9 common frames omitted
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authenFilter': Unsatisfied dependency expressed through field 'jwtUtils'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtToken' defined in file [E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main\com\klkt\klktkotlin\authen\security\JwtToken.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.klkt.klktkotlin.authen.security.JwtToken]: Constructor threw exception; nested exception is java.lang.NullPointerException
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:713)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:693)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:408)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:213)
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:176)
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:171)
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:156)
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:262)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:236)
-	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53)
-	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4904)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
-	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
-	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:794)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
-	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
-	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:248)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
-	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
-	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:921)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
-	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:489)
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
-	... 14 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtToken' defined in file [E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main\com\klkt\klktkotlin\authen\security\JwtToken.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.klkt.klktkotlin.authen.security.JwtToken]: Constructor threw exception; nested exception is java.lang.NullPointerException
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:310)
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:176)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:710)
-	... 56 common frames omitted
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.klkt.klktkotlin.authen.security.JwtToken]: Constructor threw exception; nested exception is java.lang.NullPointerException
-	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224)
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:117)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:306)
-	... 69 common frames omitted
-Caused by: java.lang.NullPointerException: null
-	at com.klkt.klktkotlin.authen.security.JwtToken.<init>(JwtToken.kt:30)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at kotlin.reflect.jvm.internal.calls.CallerImpl$Constructor.call(CallerImpl.kt:41)
-	at kotlin.reflect.jvm.internal.KCallableImpl.call(KCallableImpl.kt:108)
-	at kotlin.reflect.jvm.internal.KCallableImpl.callDefaultMethod$kotlin_reflection(KCallableImpl.kt:159)
-	at kotlin.reflect.jvm.internal.KCallableImpl.callBy(KCallableImpl.kt:112)
-	at org.springframework.beans.BeanUtils$KotlinDelegate.instantiateClass(BeanUtils.java:893)
-	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:196)
-	... 71 common frames omitted
-19/12/2023 10:45:32.872 WARN  [main] o.s.b.l.logback.LogbackLoggingSystem (initialize:136): Ignoring 'logback.configurationFile' system property. Please use 'logging.config' instead.
-19/12/2023 10:45:32.932 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarting:55): Starting KlktkotlinApplication.Companion using Java 1.8.0_202 on DESKTOP-K4TI3L5 with PID 16904 (E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main started by giangtd-pc in E:\Projects\KLKT\klktkotlin)
-19/12/2023 10:45:32.933 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStartupProfileInfo:632): No active profile set, falling back to 1 default profile: "default"
-19/12/2023 10:45:34.147 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (initialize:108): Tomcat initialized with port(s): 8088 (http)
-19/12/2023 10:45:34.151 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Initializing ProtocolHandler ["http-nio-8088"]
-19/12/2023 10:45:34.153 INFO  [main] o.a.catalina.core.StandardService (log:173): Starting service [Tomcat]
-19/12/2023 10:45:34.154 INFO  [main] o.a.catalina.core.StandardEngine (log:173): Starting Servlet engine: [Apache Tomcat/9.0.82]
-19/12/2023 10:45:34.274 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring embedded WebApplicationContext
-19/12/2023 10:45:34.275 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext (prepareWebApplicationContext:292): Root WebApplicationContext: initialization completed in 1296 ms
-19/12/2023 10:45:34.649 INFO  [main] c.k.k.a.service.RouteMapperServics (init:40): =======>path: [error] /error
-19/12/2023 10:45:34.649 INFO  [main] c.k.k.a.service.RouteMapperServics (init:40): =======>path: [getDocumentation] /v2/api-docs
-19/12/2023 10:45:34.649 INFO  [main] c.k.k.a.service.RouteMapperServics (init:40): =======>path: [refreshAccessToken] /api/auth/refresh
-19/12/2023 10:45:34.650 INFO  [main] c.k.k.a.service.RouteMapperServics (init:40): =======>path: [uiConfiguration] /swagger-resources/configuration/ui
-19/12/2023 10:45:34.650 INFO  [main] c.k.k.a.service.RouteMapperServics (init:40): =======>path: [getDocumentation] /v3/api-docs
-19/12/2023 10:45:34.650 INFO  [main] c.k.k.a.service.RouteMapperServics (init:40): =======>path: [getData] /v1/dvc/get
-19/12/2023 10:45:34.650 INFO  [main] c.k.k.a.service.RouteMapperServics (init:40): =======>path: [securityConfiguration] /swagger-resources/configuration/security
-19/12/2023 10:45:34.650 INFO  [main] c.k.k.a.service.RouteMapperServics (init:40): =======>path: [authenticate] /api/auth
-19/12/2023 10:45:34.651 INFO  [main] c.k.k.a.service.RouteMapperServics (init:40): =======>path: [errorHtml] /error
-19/12/2023 10:45:34.651 INFO  [main] c.k.k.a.service.RouteMapperServics (init:40): =======>path: [getDataTest] /v1/dvc/get-test
-19/12/2023 10:45:34.651 INFO  [main] c.k.k.a.service.RouteMapperServics (init:40): =======>path: [swaggerResources] /swagger-resources
-19/12/2023 10:45:34.651 INFO  [main] c.k.k.a.service.RouteMapperServics (reload:63): Add permit router. id: 0 > /v2/api-docs
-19/12/2023 10:45:34.651 INFO  [main] c.k.k.a.service.RouteMapperServics (reload:63): Add permit router. id: 0 > /error
-19/12/2023 10:45:34.651 INFO  [main] c.k.k.a.service.RouteMapperServics (reload:63): Add permit router. id: 0 > /api/auth
-19/12/2023 10:45:34.651 INFO  [main] c.k.k.a.service.RouteMapperServics (reload:63): Add permit router. id: 0 > /api/auth/refresh
-19/12/2023 10:45:34.652 INFO  [main] c.k.k.a.service.RouteMapperServics (reload:63): Add permit router. id: 0 > /swagger-resources/configuration/ui
-19/12/2023 10:45:34.652 INFO  [main] c.k.k.a.service.RouteMapperServics (reload:63): Add permit router. id: 0 > /swagger-resources/configuration/security
-19/12/2023 10:45:34.652 INFO  [main] c.k.k.a.service.RouteMapperServics (reload:63): Add permit router. id: 0 > /v3/api-docs
-19/12/2023 10:45:34.652 INFO  [main] c.k.k.a.service.RouteMapperServics (reload:63): Add permit router. id: 0 > /swagger-resources
-19/12/2023 10:45:34.652 INFO  [main] c.k.k.a.service.RouteMapperServics (reload:63): Add permit router. id: 0 > /v1/dvc/get
-19/12/2023 10:45:34.652 INFO  [main] c.k.k.a.service.RouteMapperServics (reload:63): Add permit router. id: 0 > /v1/dvc/get-test
-19/12/2023 10:45:34.652 INFO  [main] c.k.k.a.service.RouteMapperServics (init:44): Load controller complete! total: 10
-19/12/2023 10:45:35.003 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_test - Starting...
-19/12/2023 10:45:35.447 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_test - Start completed.
-19/12/2023 10:45:35.447 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_dev - Starting...
-19/12/2023 10:45:35.493 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_dev - Start completed.
-19/12/2023 10:45:35.996 INFO  [main] o.s.s.web.DefaultSecurityFilterChain (<init>:55): Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@577bf0aa, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7455dacb, org.springframework.security.web.context.SecurityContextPersistenceFilter@4ef4f627, org.springframework.security.web.header.HeaderWriterFilter@2d258eff, org.springframework.security.web.authentication.logout.LogoutFilter@40bf4386, com.klkt.klktkotlin.webapi.auth.config.JwtAuthenticationFilter@529c2a9a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@32227215, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@79a201cf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7634f2b, org.springframework.security.web.session.SessionManagementFilter@7fe07361, org.springframework.security.web.access.ExceptionTranslationFilter@63fd4dda, org.springframework.security.web.access.intercept.AuthorizationFilter@31acfd4e]
-19/12/2023 10:45:36.000 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext (refresh:591): Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.IllegalStateException: Found WebSecurityConfigurerAdapter as well as SecurityFilterChain. Please select just one.
-19/12/2023 10:45:36.003 INFO  [main] o.a.catalina.core.StandardService (log:173): Stopping service [Tomcat]
-19/12/2023 10:45:36.013 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener (logMessage:136): 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-19/12/2023 10:45:36.033 ERROR [main] o.s.boot.SpringApplication (reportFailure:818): Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.IllegalStateException: Found WebSecurityConfigurerAdapter as well as SecurityFilterChain. Please select just one.
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:481)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:921)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
-	at com.klkt.klktkotlin.KlktkotlinApplication$Companion.main(KlktkotlinApplication.kt:50)
-	at com.klkt.klktkotlin.KlktkotlinApplication.main(KlktkotlinApplication.kt)
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.IllegalStateException: Found WebSecurityConfigurerAdapter as well as SecurityFilterChain. Please select just one.
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648)
-	... 22 common frames omitted
-Caused by: java.lang.IllegalStateException: Found WebSecurityConfigurerAdapter as well as SecurityFilterChain. Please select just one.
-	at org.springframework.util.Assert.state(Assert.java:76)
-	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration.springSecurityFilterChain(WebSecurityConfiguration.java:105)
+20/12/2023 08:20:38.448 WARN  [main] o.s.b.l.logback.LogbackLoggingSystem (initialize:136): Ignoring 'logback.configurationFile' system property. Please use 'logging.config' instead.
+20/12/2023 08:20:38.500 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarting:55): Starting KlktkotlinApplication.Companion using Java 1.8.0_202 on DESKTOP-K4TI3L5 with PID 2820 (E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main started by giangtd-pc in E:\Projects\KLKT\klktkotlin)
+20/12/2023 08:20:38.501 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStartupProfileInfo:632): No active profile set, falling back to 1 default profile: "default"
+20/12/2023 08:20:39.655 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (initialize:108): Tomcat initialized with port(s): 8088 (http)
+20/12/2023 08:20:39.660 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Initializing ProtocolHandler ["http-nio-8088"]
+20/12/2023 08:20:39.661 INFO  [main] o.a.catalina.core.StandardService (log:173): Starting service [Tomcat]
+20/12/2023 08:20:39.662 INFO  [main] o.a.catalina.core.StandardEngine (log:173): Starting Servlet engine: [Apache Tomcat/9.0.82]
+20/12/2023 08:20:39.829 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring embedded WebApplicationContext
+20/12/2023 08:20:39.829 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext (prepareWebApplicationContext:292): Root WebApplicationContext: initialization completed in 1278 ms
+20/12/2023 08:20:40.218 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_test - Starting...
+20/12/2023 08:20:40.637 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_test - Start completed.
+20/12/2023 08:20:40.638 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_dev - Starting...
+20/12/2023 08:20:40.685 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_dev - Start completed.
+20/12/2023 08:20:41.203 INFO  [main] o.s.s.web.DefaultSecurityFilterChain (<init>:55): Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@66522ead, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5a484ce1, org.springframework.security.web.context.SecurityContextPersistenceFilter@6dee8ae6, org.springframework.security.web.header.HeaderWriterFilter@76e90da5, org.springframework.security.web.authentication.logout.LogoutFilter@f25f48a, com.klkt.klktkotlin.webapi.auth.config.JwtAuthenticationFilter@79d06bbd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7e7e962d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6f5e16cf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@e91b4f4, org.springframework.security.web.session.SessionManagementFilter@3cc30dee, org.springframework.security.web.access.ExceptionTranslationFilter@4207852d, org.springframework.security.web.access.intercept.AuthorizationFilter@79eeff87]
+20/12/2023 08:20:41.292 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Starting ProtocolHandler ["http-nio-8088"]
+20/12/2023 08:20:41.300 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (start:220): Tomcat started on port(s): 8088 (http) with context path ''
+20/12/2023 08:20:41.436 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarted:61): Started KlktkotlinApplication.Companion in 3.325 seconds (JVM running for 4.154)
+20/12/2023 08:20:41.439 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:40): HELLO MR.KHOAI!
+20/12/2023 08:20:41.439 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:42): Active profiles: []
+20/12/2023 08:20:43.955 INFO  [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring DispatcherServlet 'dispatcherServlet'
+20/12/2023 08:20:43.955 INFO  [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet (initServletBean:525): Initializing Servlet 'dispatcherServlet'
+20/12/2023 08:20:43.956 INFO  [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet (initServletBean:547): Completed initialization in 1 ms
+20/12/2023 08:20:44.084 ERROR [http-nio-8088-exec-1] c.k.k.w.a.c.JwtAuthenticationFilter$Companion (doFilterInternal:55): Invalid JWT signature: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+20/12/2023 09:48:55.500 WARN  [main] o.s.b.l.logback.LogbackLoggingSystem (initialize:136): Ignoring 'logback.configurationFile' system property. Please use 'logging.config' instead.
+20/12/2023 09:48:55.598 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarting:55): Starting KlktkotlinApplication.Companion using Java 1.8.0_202 on DESKTOP-K4TI3L5 with PID 22792 (E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main started by giangtd-pc in E:\Projects\KLKT\klktkotlin)
+20/12/2023 09:48:55.600 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStartupProfileInfo:632): No active profile set, falling back to 1 default profile: "default"
+20/12/2023 09:48:57.043 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (initialize:108): Tomcat initialized with port(s): 8088 (http)
+20/12/2023 09:48:57.051 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Initializing ProtocolHandler ["http-nio-8088"]
+20/12/2023 09:48:57.052 INFO  [main] o.a.catalina.core.StandardService (log:173): Starting service [Tomcat]
+20/12/2023 09:48:57.053 INFO  [main] o.a.catalina.core.StandardEngine (log:173): Starting Servlet engine: [Apache Tomcat/9.0.82]
+20/12/2023 09:48:57.197 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring embedded WebApplicationContext
+20/12/2023 09:48:57.197 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext (prepareWebApplicationContext:292): Root WebApplicationContext: initialization completed in 1453 ms
+20/12/2023 09:48:57.571 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_test - Starting...
+20/12/2023 09:48:57.990 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_test - Start completed.
+20/12/2023 09:48:57.990 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_dev - Starting...
+20/12/2023 09:48:58.037 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_dev - Start completed.
+20/12/2023 09:48:58.483 INFO  [main] o.s.s.web.DefaultSecurityFilterChain (<init>:55): Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@b9d018b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@429aeac1, org.springframework.security.web.context.SecurityContextPersistenceFilter@217c23ce, org.springframework.security.web.header.HeaderWriterFilter@70d77826, org.springframework.security.web.authentication.logout.LogoutFilter@51fc862e, com.klkt.klktkotlin.webapi.auth.config.JwtAuthenticationFilter@144ab54, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@47148f3f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7d528cf7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@79eeff87, org.springframework.security.web.session.SessionManagementFilter@214beff9, org.springframework.security.web.access.ExceptionTranslationFilter@27e2287c, org.springframework.security.web.access.intercept.AuthorizationFilter@54336976]
+20/12/2023 09:48:58.564 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Starting ProtocolHandler ["http-nio-8088"]
+20/12/2023 09:48:58.578 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (start:220): Tomcat started on port(s): 8088 (http) with context path ''
+20/12/2023 09:48:58.700 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarted:61): Started KlktkotlinApplication.Companion in 3.995 seconds (JVM running for 4.796)
+20/12/2023 09:48:58.703 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:40): HELLO MR.KHOAI!
+20/12/2023 09:48:58.703 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:42): Active profiles: []
+20/12/2023 09:49:34.275 INFO  [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring DispatcherServlet 'dispatcherServlet'
+20/12/2023 09:49:34.275 INFO  [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet (initServletBean:525): Initializing Servlet 'dispatcherServlet'
+20/12/2023 09:49:34.277 INFO  [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet (initServletBean:547): Completed initialization in 1 ms
+20/12/2023 09:49:34.361 ERROR [http-nio-8088-exec-1] c.k.k.w.a.c.JwtAuthenticationFilter$Companion (doFilterInternal:52): Invalid JWT signature: {}
+io.jsonwebtoken.security.SignatureException: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+	at io.jsonwebtoken.impl.DefaultJwtParser.verifySignature(DefaultJwtParser.java:340)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:577)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:362)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:94)
+	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:36)
+	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:29)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseSignedClaims(DefaultJwtParser.java:821)
+	at com.klkt.klktkotlin.webapi.auth.service.TokenService.getAllClaims(TokenService.kt:64)
+	at com.klkt.klktkotlin.webapi.auth.service.TokenService.extractUsername(TokenService.kt:41)
+	at com.klkt.klktkotlin.webapi.auth.config.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.kt:41)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+20/12/2023 09:53:07.951 WARN  [main] o.s.b.l.logback.LogbackLoggingSystem (initialize:136): Ignoring 'logback.configurationFile' system property. Please use 'logging.config' instead.
+20/12/2023 09:53:08.068 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarting:55): Starting KlktkotlinApplication.Companion using Java 1.8.0_202 on DESKTOP-K4TI3L5 with PID 11780 (E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main started by giangtd-pc in E:\Projects\KLKT\klktkotlin)
+20/12/2023 09:53:08.073 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStartupProfileInfo:632): No active profile set, falling back to 1 default profile: "default"
+20/12/2023 09:53:09.127 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (initialize:108): Tomcat initialized with port(s): 8088 (http)
+20/12/2023 09:53:09.131 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Initializing ProtocolHandler ["http-nio-8088"]
+20/12/2023 09:53:09.132 INFO  [main] o.a.catalina.core.StandardService (log:173): Starting service [Tomcat]
+20/12/2023 09:53:09.133 INFO  [main] o.a.catalina.core.StandardEngine (log:173): Starting Servlet engine: [Apache Tomcat/9.0.82]
+20/12/2023 09:53:09.280 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring embedded WebApplicationContext
+20/12/2023 09:53:09.280 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext (prepareWebApplicationContext:292): Root WebApplicationContext: initialization completed in 1082 ms
+20/12/2023 09:53:09.638 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_test - Starting...
+20/12/2023 09:53:10.027 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_test - Start completed.
+20/12/2023 09:53:10.027 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_dev - Starting...
+20/12/2023 09:53:10.073 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_dev - Start completed.
+20/12/2023 09:53:10.521 INFO  [main] o.s.s.web.DefaultSecurityFilterChain (<init>:55): Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@79eeff87, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6b4fc2d1, org.springframework.security.web.context.SecurityContextPersistenceFilter@47148f3f, org.springframework.security.web.header.HeaderWriterFilter@4f169009, org.springframework.security.web.authentication.logout.LogoutFilter@fe09383, com.klkt.klktkotlin.webapi.auth.config.JwtAuthenticationFilter@6ecab872, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1200458e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5af64ce0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@8bd076a, org.springframework.security.web.session.SessionManagementFilter@217c23ce, org.springframework.security.web.access.ExceptionTranslationFilter@2cd388f5, org.springframework.security.web.access.intercept.AuthorizationFilter@3b7c80c6]
+20/12/2023 09:53:10.605 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Starting ProtocolHandler ["http-nio-8088"]
+20/12/2023 09:53:10.612 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (start:220): Tomcat started on port(s): 8088 (http) with context path ''
+20/12/2023 09:53:10.729 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarted:61): Started KlktkotlinApplication.Companion in 3.285 seconds (JVM running for 4.357)
+20/12/2023 09:53:10.732 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:40): HELLO MR.KHOAI!
+20/12/2023 09:53:10.732 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:42): Active profiles: []
+20/12/2023 09:56:16.325 WARN  [main] o.s.b.l.logback.LogbackLoggingSystem (initialize:136): Ignoring 'logback.configurationFile' system property. Please use 'logging.config' instead.
+20/12/2023 09:56:16.381 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarting:55): Starting KlktkotlinApplication.Companion using Java 1.8.0_202 on DESKTOP-K4TI3L5 with PID 18984 (E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main started by giangtd-pc in E:\Projects\KLKT\klktkotlin)
+20/12/2023 09:56:16.382 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStartupProfileInfo:632): No active profile set, falling back to 1 default profile: "default"
+20/12/2023 09:56:17.433 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (initialize:108): Tomcat initialized with port(s): 8088 (http)
+20/12/2023 09:56:17.438 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Initializing ProtocolHandler ["http-nio-8088"]
+20/12/2023 09:56:17.439 INFO  [main] o.a.catalina.core.StandardService (log:173): Starting service [Tomcat]
+20/12/2023 09:56:17.440 INFO  [main] o.a.catalina.core.StandardEngine (log:173): Starting Servlet engine: [Apache Tomcat/9.0.82]
+20/12/2023 09:56:17.589 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring embedded WebApplicationContext
+20/12/2023 09:56:17.589 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext (prepareWebApplicationContext:292): Root WebApplicationContext: initialization completed in 1166 ms
+20/12/2023 09:56:18.080 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_test - Starting...
+20/12/2023 09:56:18.524 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_test - Start completed.
+20/12/2023 09:56:18.525 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_dev - Starting...
+20/12/2023 09:56:18.570 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_dev - Start completed.
+20/12/2023 09:56:19.009 INFO  [main] o.s.s.web.DefaultSecurityFilterChain (<init>:55): Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@b9d018b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@429aeac1, org.springframework.security.web.context.SecurityContextPersistenceFilter@217c23ce, org.springframework.security.web.header.HeaderWriterFilter@70d77826, org.springframework.security.web.authentication.logout.LogoutFilter@51fc862e, com.klkt.klktkotlin.webapi.auth.config.JwtAuthenticationFilter@144ab54, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@47148f3f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7d528cf7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@79eeff87, org.springframework.security.web.session.SessionManagementFilter@214beff9, org.springframework.security.web.access.ExceptionTranslationFilter@27e2287c, org.springframework.security.web.access.intercept.AuthorizationFilter@54336976]
+20/12/2023 09:56:19.093 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Starting ProtocolHandler ["http-nio-8088"]
+20/12/2023 09:56:19.102 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (start:220): Tomcat started on port(s): 8088 (http) with context path ''
+20/12/2023 09:56:19.235 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarted:61): Started KlktkotlinApplication.Companion in 3.246 seconds (JVM running for 3.987)
+20/12/2023 09:56:19.238 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:40): HELLO MR.KHOAI!
+20/12/2023 09:56:19.238 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:42): Active profiles: []
+20/12/2023 09:56:33.650 INFO  [http-nio-8088-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring DispatcherServlet 'dispatcherServlet'
+20/12/2023 09:56:33.651 INFO  [http-nio-8088-exec-3] o.s.web.servlet.DispatcherServlet (initServletBean:525): Initializing Servlet 'dispatcherServlet'
+20/12/2023 09:56:33.652 INFO  [http-nio-8088-exec-3] o.s.web.servlet.DispatcherServlet (initServletBean:547): Completed initialization in 1 ms
+20/12/2023 09:56:33.753 ERROR [http-nio-8088-exec-3] c.k.k.w.a.c.JwtAuthenticationFilter$Companion (doFilterInternal:52): Invalid JWT signature: {}
+io.jsonwebtoken.security.SignatureException: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+	at io.jsonwebtoken.impl.DefaultJwtParser.verifySignature(DefaultJwtParser.java:340)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:577)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:362)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:94)
+	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:36)
+	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:29)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseSignedClaims(DefaultJwtParser.java:821)
+	at com.klkt.klktkotlin.webapi.auth.service.TokenService.getAllClaims(TokenService.kt:64)
+	at com.klkt.klktkotlin.webapi.auth.service.TokenService.extractUsername(TokenService.kt:41)
+	at com.klkt.klktkotlin.webapi.auth.config.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.kt:41)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+20/12/2023 10:00:10.713 WARN  [main] o.s.b.l.logback.LogbackLoggingSystem (initialize:136): Ignoring 'logback.configurationFile' system property. Please use 'logging.config' instead.
+20/12/2023 10:00:10.760 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarting:55): Starting KlktkotlinApplication.Companion using Java 1.8.0_202 on DESKTOP-K4TI3L5 with PID 21096 (E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main started by giangtd-pc in E:\Projects\KLKT\klktkotlin)
+20/12/2023 10:00:10.761 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStartupProfileInfo:632): No active profile set, falling back to 1 default profile: "default"
+20/12/2023 10:00:11.759 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (initialize:108): Tomcat initialized with port(s): 8088 (http)
+20/12/2023 10:00:11.765 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Initializing ProtocolHandler ["http-nio-8088"]
+20/12/2023 10:00:11.766 INFO  [main] o.a.catalina.core.StandardService (log:173): Starting service [Tomcat]
+20/12/2023 10:00:11.766 INFO  [main] o.a.catalina.core.StandardEngine (log:173): Starting Servlet engine: [Apache Tomcat/9.0.82]
+20/12/2023 10:00:11.919 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring embedded WebApplicationContext
+20/12/2023 10:00:11.920 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext (prepareWebApplicationContext:292): Root WebApplicationContext: initialization completed in 1118 ms
+20/12/2023 10:00:12.266 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_test - Starting...
+20/12/2023 10:00:12.693 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_test - Start completed.
+20/12/2023 10:00:12.693 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_dev - Starting...
+20/12/2023 10:00:12.773 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_dev - Start completed.
+20/12/2023 10:00:13.375 INFO  [main] o.s.s.web.DefaultSecurityFilterChain (<init>:55): Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6b4fc2d1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@8bd076a, org.springframework.security.web.context.SecurityContextPersistenceFilter@52226e57, org.springframework.security.web.header.HeaderWriterFilter@9dada78, org.springframework.security.web.authentication.logout.LogoutFilter@28e0e464, com.klkt.klktkotlin.webapi.auth.config.JwtAuthenticationFilter@2cfa2c4f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5fcd1c5f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7e7e962d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1de4285e, org.springframework.security.web.session.SessionManagementFilter@39de9bda, org.springframework.security.web.access.ExceptionTranslationFilter@4640195a, org.springframework.security.web.access.intercept.AuthorizationFilter@3b2e5c0d]
+20/12/2023 10:00:13.468 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Starting ProtocolHandler ["http-nio-8088"]
+20/12/2023 10:00:13.476 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (start:220): Tomcat started on port(s): 8088 (http) with context path ''
+20/12/2023 10:00:13.602 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarted:61): Started KlktkotlinApplication.Companion in 3.208 seconds (JVM running for 3.865)
+20/12/2023 10:00:13.605 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:40): HELLO MR.KHOAI!
+20/12/2023 10:00:13.606 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:42): Active profiles: []
+20/12/2023 10:00:20.970 WARN  [main] o.s.b.l.logback.LogbackLoggingSystem (initialize:136): Ignoring 'logback.configurationFile' system property. Please use 'logging.config' instead.
+20/12/2023 10:00:21.022 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarting:55): Starting KlktkotlinApplication.Companion using Java 1.8.0_202 on DESKTOP-K4TI3L5 with PID 20492 (E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main started by giangtd-pc in E:\Projects\KLKT\klktkotlin)
+20/12/2023 10:00:21.023 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStartupProfileInfo:632): No active profile set, falling back to 1 default profile: "default"
+20/12/2023 10:00:22.039 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (initialize:108): Tomcat initialized with port(s): 8088 (http)
+20/12/2023 10:00:22.046 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Initializing ProtocolHandler ["http-nio-8088"]
+20/12/2023 10:00:22.047 INFO  [main] o.a.catalina.core.StandardService (log:173): Starting service [Tomcat]
+20/12/2023 10:00:22.047 INFO  [main] o.a.catalina.core.StandardEngine (log:173): Starting Servlet engine: [Apache Tomcat/9.0.82]
+20/12/2023 10:00:22.205 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring embedded WebApplicationContext
+20/12/2023 10:00:22.206 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext (prepareWebApplicationContext:292): Root WebApplicationContext: initialization completed in 1141 ms
+20/12/2023 10:00:22.576 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_test - Starting...
+20/12/2023 10:00:23.008 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_test - Start completed.
+20/12/2023 10:00:23.009 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_dev - Starting...
+20/12/2023 10:00:23.055 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_dev - Start completed.
+20/12/2023 10:00:23.511 INFO  [main] o.s.s.web.DefaultSecurityFilterChain (<init>:55): Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@429aeac1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@79eeff87, org.springframework.security.web.context.SecurityContextPersistenceFilter@39de9bda, org.springframework.security.web.header.HeaderWriterFilter@7f323b3a, org.springframework.security.web.authentication.logout.LogoutFilter@a7cf42f, com.klkt.klktkotlin.webapi.auth.config.JwtAuthenticationFilter@2cfa2c4f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@52226e57, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6dee8ae6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6b4fc2d1, org.springframework.security.web.session.SessionManagementFilter@1ff15a50, org.springframework.security.web.access.ExceptionTranslationFilter@16132f21, org.springframework.security.web.access.intercept.AuthorizationFilter@f25f48a]
+20/12/2023 10:00:23.598 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Starting ProtocolHandler ["http-nio-8088"]
+20/12/2023 10:00:23.607 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (start:220): Tomcat started on port(s): 8088 (http) with context path ''
+20/12/2023 10:00:23.753 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarted:61): Started KlktkotlinApplication.Companion in 3.116 seconds (JVM running for 3.82)
+20/12/2023 10:00:23.755 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:40): HELLO MR.KHOAI!
+20/12/2023 10:00:23.756 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:42): Active profiles: []
+20/12/2023 10:00:43.683 INFO  [http-nio-8088-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring DispatcherServlet 'dispatcherServlet'
+20/12/2023 10:00:43.684 INFO  [http-nio-8088-exec-5] o.s.web.servlet.DispatcherServlet (initServletBean:525): Initializing Servlet 'dispatcherServlet'
+20/12/2023 10:00:43.684 INFO  [http-nio-8088-exec-5] o.s.web.servlet.DispatcherServlet (initServletBean:547): Completed initialization in 0 ms
+20/12/2023 10:00:43.771 ERROR [http-nio-8088-exec-5] c.k.k.w.a.c.JwtAuthenticationFilter$Companion (doFilterInternal:52): Invalid JWT signature: {}
+io.jsonwebtoken.security.SignatureException: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+	at io.jsonwebtoken.impl.DefaultJwtParser.verifySignature(DefaultJwtParser.java:340)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:577)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:362)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:94)
+	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:36)
+	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:29)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseSignedClaims(DefaultJwtParser.java:821)
+	at com.klkt.klktkotlin.webapi.auth.service.TokenService.getAllClaims(TokenService.kt:64)
+	at com.klkt.klktkotlin.webapi.auth.service.TokenService.extractUsername(TokenService.kt:41)
+	at com.klkt.klktkotlin.webapi.auth.config.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.kt:41)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+20/12/2023 10:01:08.657 WARN  [main] o.s.b.l.logback.LogbackLoggingSystem (initialize:136): Ignoring 'logback.configurationFile' system property. Please use 'logging.config' instead.
+20/12/2023 10:01:08.722 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarting:55): Starting KlktkotlinApplication.Companion using Java 1.8.0_202 on DESKTOP-K4TI3L5 with PID 20704 (E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main started by giangtd-pc in E:\Projects\KLKT\klktkotlin)
+20/12/2023 10:01:08.722 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStartupProfileInfo:632): No active profile set, falling back to 1 default profile: "default"
+20/12/2023 10:01:09.881 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (initialize:108): Tomcat initialized with port(s): 8088 (http)
+20/12/2023 10:01:09.886 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Initializing ProtocolHandler ["http-nio-8088"]
+20/12/2023 10:01:09.887 INFO  [main] o.a.catalina.core.StandardService (log:173): Starting service [Tomcat]
+20/12/2023 10:01:09.888 INFO  [main] o.a.catalina.core.StandardEngine (log:173): Starting Servlet engine: [Apache Tomcat/9.0.82]
+20/12/2023 10:01:10.048 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring embedded WebApplicationContext
+20/12/2023 10:01:10.049 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext (prepareWebApplicationContext:292): Root WebApplicationContext: initialization completed in 1271 ms
+20/12/2023 10:01:10.409 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_test - Starting...
+20/12/2023 10:01:10.816 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_test - Start completed.
+20/12/2023 10:01:10.816 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_dev - Starting...
+20/12/2023 10:01:10.862 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_dev - Start completed.
+20/12/2023 10:01:11.296 INFO  [main] o.s.s.web.DefaultSecurityFilterChain (<init>:55): Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@79eeff87, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6b4fc2d1, org.springframework.security.web.context.SecurityContextPersistenceFilter@47148f3f, org.springframework.security.web.header.HeaderWriterFilter@4f169009, org.springframework.security.web.authentication.logout.LogoutFilter@fe09383, com.klkt.klktkotlin.webapi.auth.config.JwtAuthenticationFilter@6ecab872, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1200458e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5af64ce0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@8bd076a, org.springframework.security.web.session.SessionManagementFilter@217c23ce, org.springframework.security.web.access.ExceptionTranslationFilter@2cd388f5, org.springframework.security.web.access.intercept.AuthorizationFilter@3b7c80c6]
+20/12/2023 10:01:11.395 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Starting ProtocolHandler ["http-nio-8088"]
+20/12/2023 10:01:11.404 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (start:220): Tomcat started on port(s): 8088 (http) with context path ''
+20/12/2023 10:01:11.606 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarted:61): Started KlktkotlinApplication.Companion in 3.351 seconds (JVM running for 4.016)
+20/12/2023 10:01:11.609 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:40): HELLO MR.KHOAI!
+20/12/2023 10:01:11.609 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:42): Active profiles: []
+20/12/2023 10:01:16.473 INFO  [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring DispatcherServlet 'dispatcherServlet'
+20/12/2023 10:01:16.473 INFO  [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet (initServletBean:525): Initializing Servlet 'dispatcherServlet'
+20/12/2023 10:01:16.474 INFO  [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet (initServletBean:547): Completed initialization in 1 ms
+20/12/2023 10:01:16.556 ERROR [http-nio-8088-exec-1] c.k.k.w.a.c.JwtAuthenticationFilter$Companion (doFilterInternal:52): Invalid JWT signature: {}
+io.jsonwebtoken.security.SignatureException: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+	at io.jsonwebtoken.impl.DefaultJwtParser.verifySignature(DefaultJwtParser.java:340)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:577)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:362)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:94)
+	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:36)
+	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:29)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseSignedClaims(DefaultJwtParser.java:821)
+	at com.klkt.klktkotlin.webapi.auth.service.TokenService.getAllClaims(TokenService.kt:64)
+	at com.klkt.klktkotlin.webapi.auth.service.TokenService.extractUsername(TokenService.kt:41)
+	at com.klkt.klktkotlin.webapi.auth.config.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.kt:41)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+20/12/2023 10:01:50.043 INFO  [http-nio-8088-exec-4] c.k.klktkotlin.webapi.DvcController (getData:41): objInput Dev: {"name":"Add your name in the body"}
+20/12/2023 10:01:50.279 WARN  [http-nio-8088-exec-4] c.k.k.webapi.auth.utils.AuthUtils (makeErrorResponse:124): [INVALID REQUEST] response to client failed. getOutputStream() has already been called for this response
+20/12/2023 10:01:52.900 INFO  [http-nio-8088-exec-5] c.k.klktkotlin.webapi.DvcController (getData:41): objInput Dev: {"name":"Add your name in the body"}
+20/12/2023 10:01:52.933 WARN  [http-nio-8088-exec-5] c.k.k.webapi.auth.utils.AuthUtils (makeErrorResponse:124): [INVALID REQUEST] response to client failed. getOutputStream() has already been called for this response
+20/12/2023 10:03:30.129 WARN  [main] o.s.b.l.logback.LogbackLoggingSystem (initialize:136): Ignoring 'logback.configurationFile' system property. Please use 'logging.config' instead.
+20/12/2023 10:03:30.191 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarting:55): Starting KlktkotlinApplication.Companion using Java 1.8.0_202 on DESKTOP-K4TI3L5 with PID 7304 (E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main started by giangtd-pc in E:\Projects\KLKT\klktkotlin)
+20/12/2023 10:03:30.192 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStartupProfileInfo:632): No active profile set, falling back to 1 default profile: "default"
+20/12/2023 10:03:31.385 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (initialize:108): Tomcat initialized with port(s): 8088 (http)
+20/12/2023 10:03:31.391 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Initializing ProtocolHandler ["http-nio-8088"]
+20/12/2023 10:03:31.392 INFO  [main] o.a.catalina.core.StandardService (log:173): Starting service [Tomcat]
+20/12/2023 10:03:31.393 INFO  [main] o.a.catalina.core.StandardEngine (log:173): Starting Servlet engine: [Apache Tomcat/9.0.82]
+20/12/2023 10:03:31.550 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring embedded WebApplicationContext
+20/12/2023 10:03:31.551 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext (prepareWebApplicationContext:292): Root WebApplicationContext: initialization completed in 1299 ms
+20/12/2023 10:03:31.972 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_test - Starting...
+20/12/2023 10:03:32.432 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_test - Start completed.
+20/12/2023 10:03:32.433 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_dev - Starting...
+20/12/2023 10:03:32.481 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_dev - Start completed.
+20/12/2023 10:03:33.018 INFO  [main] o.s.s.web.DefaultSecurityFilterChain (<init>:55): Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@79eeff87, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6b4fc2d1, org.springframework.security.web.context.SecurityContextPersistenceFilter@47148f3f, org.springframework.security.web.header.HeaderWriterFilter@4f169009, org.springframework.security.web.authentication.logout.LogoutFilter@fe09383, com.klkt.klktkotlin.webapi.auth.config.JwtAuthenticationFilter@6ecab872, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1200458e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5af64ce0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@8bd076a, org.springframework.security.web.session.SessionManagementFilter@217c23ce, org.springframework.security.web.access.ExceptionTranslationFilter@2cd388f5, org.springframework.security.web.access.intercept.AuthorizationFilter@3b7c80c6]
+20/12/2023 10:03:33.120 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Starting ProtocolHandler ["http-nio-8088"]
+20/12/2023 10:03:33.130 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (start:220): Tomcat started on port(s): 8088 (http) with context path ''
+20/12/2023 10:03:33.279 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarted:61): Started KlktkotlinApplication.Companion in 3.538 seconds (JVM running for 4.516)
+20/12/2023 10:03:33.281 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:40): HELLO MR.KHOAI!
+20/12/2023 10:03:33.282 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:42): Active profiles: []
+20/12/2023 10:03:36.953 INFO  [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring DispatcherServlet 'dispatcherServlet'
+20/12/2023 10:03:36.954 INFO  [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet (initServletBean:525): Initializing Servlet 'dispatcherServlet'
+20/12/2023 10:03:36.955 INFO  [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet (initServletBean:547): Completed initialization in 1 ms
+20/12/2023 10:03:37.099 INFO  [http-nio-8088-exec-1] c.k.klktkotlin.webapi.DvcController (getData:41): objInput Dev: {"name":"Add your name in the body"}
+20/12/2023 10:03:37.316 WARN  [http-nio-8088-exec-1] c.k.k.webapi.auth.utils.AuthUtils (makeErrorResponse:124): [INVALID REQUEST] response to client failed. getOutputStream() has already been called for this response
+20/12/2023 10:06:22.545 WARN  [main] o.s.b.l.logback.LogbackLoggingSystem (initialize:136): Ignoring 'logback.configurationFile' system property. Please use 'logging.config' instead.
+20/12/2023 10:06:22.597 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarting:55): Starting KlktkotlinApplication.Companion using Java 1.8.0_202 on DESKTOP-K4TI3L5 with PID 20876 (E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main started by giangtd-pc in E:\Projects\KLKT\klktkotlin)
+20/12/2023 10:06:22.598 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStartupProfileInfo:632): No active profile set, falling back to 1 default profile: "default"
+20/12/2023 10:06:23.739 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (initialize:108): Tomcat initialized with port(s): 8088 (http)
+20/12/2023 10:06:23.745 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Initializing ProtocolHandler ["http-nio-8088"]
+20/12/2023 10:06:23.746 INFO  [main] o.a.catalina.core.StandardService (log:173): Starting service [Tomcat]
+20/12/2023 10:06:23.746 INFO  [main] o.a.catalina.core.StandardEngine (log:173): Starting Servlet engine: [Apache Tomcat/9.0.82]
+20/12/2023 10:06:23.904 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring embedded WebApplicationContext
+20/12/2023 10:06:23.905 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext (prepareWebApplicationContext:292): Root WebApplicationContext: initialization completed in 1262 ms
+20/12/2023 10:06:24.291 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_test - Starting...
+20/12/2023 10:06:24.699 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_test - Start completed.
+20/12/2023 10:06:24.699 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_dev - Starting...
+20/12/2023 10:06:24.749 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_dev - Start completed.
+20/12/2023 10:06:25.262 INFO  [main] o.s.s.web.DefaultSecurityFilterChain (<init>:55): Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@79eeff87, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6b4fc2d1, org.springframework.security.web.context.SecurityContextPersistenceFilter@47148f3f, org.springframework.security.web.header.HeaderWriterFilter@4f169009, org.springframework.security.web.authentication.logout.LogoutFilter@fe09383, com.klkt.klktkotlin.webapi.auth.config.JwtAuthenticationFilter@144ab54, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1200458e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5af64ce0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@8bd076a, org.springframework.security.web.session.SessionManagementFilter@217c23ce, org.springframework.security.web.access.ExceptionTranslationFilter@2cd388f5, org.springframework.security.web.access.intercept.AuthorizationFilter@3b7c80c6]
+20/12/2023 10:06:25.338 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Starting ProtocolHandler ["http-nio-8088"]
+20/12/2023 10:06:25.347 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (start:220): Tomcat started on port(s): 8088 (http) with context path ''
+20/12/2023 10:06:25.469 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarted:61): Started KlktkotlinApplication.Companion in 3.338 seconds (JVM running for 4.069)
+20/12/2023 10:06:25.472 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:40): HELLO MR.KHOAI!
+20/12/2023 10:06:25.472 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:42): Active profiles: []
+20/12/2023 10:06:40.275 INFO  [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring DispatcherServlet 'dispatcherServlet'
+20/12/2023 10:06:40.276 INFO  [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet (initServletBean:525): Initializing Servlet 'dispatcherServlet'
+20/12/2023 10:06:40.281 INFO  [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet (initServletBean:547): Completed initialization in 2 ms
+20/12/2023 10:06:40.531 INFO  [http-nio-8088-exec-1] c.k.klktkotlin.webapi.DvcController (getData:41): objInput Dev: {"name":"Add your name in the body"}
+20/12/2023 10:06:51.439 INFO  [http-nio-8088-exec-4] c.k.klktkotlin.webapi.DvcController (getData:41): objInput Dev: {"name":"Add your name in the body"}
+20/12/2023 10:09:22.403 WARN  [main] o.s.b.l.logback.LogbackLoggingSystem (initialize:136): Ignoring 'logback.configurationFile' system property. Please use 'logging.config' instead.
+20/12/2023 10:09:22.447 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarting:55): Starting KlktkotlinApplication.Companion using Java 1.8.0_202 on DESKTOP-K4TI3L5 with PID 22708 (E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main started by giangtd-pc in E:\Projects\KLKT\klktkotlin)
+20/12/2023 10:09:22.448 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStartupProfileInfo:632): No active profile set, falling back to 1 default profile: "default"
+20/12/2023 10:09:23.421 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (initialize:108): Tomcat initialized with port(s): 8088 (http)
+20/12/2023 10:09:23.426 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Initializing ProtocolHandler ["http-nio-8088"]
+20/12/2023 10:09:23.427 INFO  [main] o.a.catalina.core.StandardService (log:173): Starting service [Tomcat]
+20/12/2023 10:09:23.427 INFO  [main] o.a.catalina.core.StandardEngine (log:173): Starting Servlet engine: [Apache Tomcat/9.0.82]
+20/12/2023 10:09:23.574 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring embedded WebApplicationContext
+20/12/2023 10:09:23.575 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext (prepareWebApplicationContext:292): Root WebApplicationContext: initialization completed in 1086 ms
+20/12/2023 10:09:23.912 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_dev - Starting...
+20/12/2023 10:09:24.289 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_dev - Start completed.
+20/12/2023 10:09:24.289 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_postgres_ttsh_dev - Starting...
+20/12/2023 10:09:24.362 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_postgres_ttsh_dev - Start completed.
+20/12/2023 10:09:24.363 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_test - Starting...
+20/12/2023 10:09:24.406 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_test - Start completed.
+20/12/2023 10:09:24.822 INFO  [main] o.s.s.web.DefaultSecurityFilterChain (<init>:55): Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@684e8c9d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6ecc02bb, org.springframework.security.web.context.SecurityContextPersistenceFilter@9accff0, org.springframework.security.web.header.HeaderWriterFilter@3db432c2, org.springframework.security.web.authentication.logout.LogoutFilter@44dc7b7d, com.klkt.klktkotlin.webapi.auth.config.JwtAuthenticationFilter@45bf6f39, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@285583d4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@58a84a12, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@31973858, org.springframework.security.web.session.SessionManagementFilter@6a32191e, org.springframework.security.web.access.ExceptionTranslationFilter@5ae1c281, org.springframework.security.web.access.intercept.AuthorizationFilter@78910096]
+20/12/2023 10:09:24.894 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Starting ProtocolHandler ["http-nio-8088"]
+20/12/2023 10:09:24.903 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (start:220): Tomcat started on port(s): 8088 (http) with context path ''
+20/12/2023 10:09:25.038 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarted:61): Started KlktkotlinApplication.Companion in 2.909 seconds (JVM running for 3.552)
+20/12/2023 10:09:25.042 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:40): HELLO MR.KHOAI!
+20/12/2023 10:09:25.043 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:42): Active profiles: []
+20/12/2023 10:16:52.538 WARN  [main] o.s.b.l.logback.LogbackLoggingSystem (initialize:136): Ignoring 'logback.configurationFile' system property. Please use 'logging.config' instead.
+20/12/2023 10:16:52.615 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarting:55): Starting KlktkotlinApplication.Companion using Java 1.8.0_202 on DESKTOP-K4TI3L5 with PID 19568 (E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main started by giangtd-pc in E:\Projects\KLKT\klktkotlin)
+20/12/2023 10:16:52.616 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStartupProfileInfo:632): No active profile set, falling back to 1 default profile: "default"
+20/12/2023 10:16:53.675 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (initialize:108): Tomcat initialized with port(s): 8088 (http)
+20/12/2023 10:16:53.679 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Initializing ProtocolHandler ["http-nio-8088"]
+20/12/2023 10:16:53.680 INFO  [main] o.a.catalina.core.StandardService (log:173): Starting service [Tomcat]
+20/12/2023 10:16:53.681 INFO  [main] o.a.catalina.core.StandardEngine (log:173): Starting Servlet engine: [Apache Tomcat/9.0.82]
+20/12/2023 10:16:53.832 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring embedded WebApplicationContext
+20/12/2023 10:16:53.833 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext (prepareWebApplicationContext:292): Root WebApplicationContext: initialization completed in 1154 ms
+20/12/2023 10:16:54.194 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_dev - Starting...
+20/12/2023 10:16:54.582 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_dev - Start completed.
+20/12/2023 10:16:54.583 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_postgres_ttsh_dev - Starting...
+20/12/2023 10:16:54.654 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_postgres_ttsh_dev - Start completed.
+20/12/2023 10:16:54.655 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_test - Starting...
+20/12/2023 10:16:54.709 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_test - Start completed.
+20/12/2023 10:16:55.332 INFO  [main] o.s.s.web.DefaultSecurityFilterChain (<init>:55): Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@26865482, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@34451ed8, org.springframework.security.web.context.SecurityContextPersistenceFilter@6436e181, org.springframework.security.web.header.HeaderWriterFilter@134f8ef6, org.springframework.security.web.authentication.logout.LogoutFilter@4a1a256d, com.klkt.klktkotlin.webapi.auth.config.JwtAuthenticationFilter@3531f3ca, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6b649efa, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@22bf9122, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@c1050f2, org.springframework.security.web.session.SessionManagementFilter@58a84a12, org.springframework.security.web.access.ExceptionTranslationFilter@627ff1b8, org.springframework.security.web.access.intercept.AuthorizationFilter@65514add]
+20/12/2023 10:16:55.429 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Starting ProtocolHandler ["http-nio-8088"]
+20/12/2023 10:16:55.438 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (start:220): Tomcat started on port(s): 8088 (http) with context path ''
+20/12/2023 10:16:55.599 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarted:61): Started KlktkotlinApplication.Companion in 3.647 seconds (JVM running for 4.674)
+20/12/2023 10:16:55.604 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:40): HELLO MR.KHOAI!
+20/12/2023 10:16:55.604 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:42): Active profiles: []
+20/12/2023 10:17:49.321 INFO  [http-nio-8088-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring DispatcherServlet 'dispatcherServlet'
+20/12/2023 10:17:49.322 INFO  [http-nio-8088-exec-3] o.s.web.servlet.DispatcherServlet (initServletBean:525): Initializing Servlet 'dispatcherServlet'
+20/12/2023 10:17:49.323 INFO  [http-nio-8088-exec-3] o.s.web.servlet.DispatcherServlet (initServletBean:547): Completed initialization in 1 ms
+20/12/2023 10:17:58.908 WARN  [http-nio-8088-exec-7] o.s.w.s.m.s.DefaultHandlerExceptionResolver (logException:208): Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'text/plain;charset=UTF-8' not supported]
+20/12/2023 10:19:44.782 INFO  [http-nio-8088-exec-1] c.k.klktkotlin.webapi.DvcController (getData:41): objInput Dev: {"name":"Add your name in the body"}
+20/12/2023 10:20:24.349 INFO  [http-nio-8088-exec-6] c.k.klktkotlin.webapi.TtshController (getData:40): objInput Dev: {"name":"TTSH body"}
+20/12/2023 10:20:24.363 ERROR [http-nio-8088-exec-6] com.klkt.klktkotlin.repo.TtshRepo (getData:17): ERROR:
+20/12/2023 10:20:27.159 INFO  [http-nio-8088-exec-5] c.k.klktkotlin.webapi.TtshController (getData:40): objInput Dev: {"name":"TTSH body"}
+20/12/2023 10:20:27.163 ERROR [http-nio-8088-exec-5] com.klkt.klktkotlin.repo.TtshRepo (getData:17): ERROR:
+20/12/2023 10:20:56.139 WARN  [main] o.s.b.l.logback.LogbackLoggingSystem (initialize:136): Ignoring 'logback.configurationFile' system property. Please use 'logging.config' instead.
+20/12/2023 10:20:56.197 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarting:55): Starting KlktkotlinApplication.Companion using Java 1.8.0_202 on DESKTOP-K4TI3L5 with PID 9632 (E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main started by giangtd-pc in E:\Projects\KLKT\klktkotlin)
+20/12/2023 10:20:56.198 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStartupProfileInfo:632): No active profile set, falling back to 1 default profile: "default"
+20/12/2023 10:20:57.360 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (initialize:108): Tomcat initialized with port(s): 8088 (http)
+20/12/2023 10:20:57.366 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Initializing ProtocolHandler ["http-nio-8088"]
+20/12/2023 10:20:57.367 INFO  [main] o.a.catalina.core.StandardService (log:173): Starting service [Tomcat]
+20/12/2023 10:20:57.367 INFO  [main] o.a.catalina.core.StandardEngine (log:173): Starting Servlet engine: [Apache Tomcat/9.0.82]
+20/12/2023 10:20:57.478 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring embedded WebApplicationContext
+20/12/2023 10:20:57.479 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext (prepareWebApplicationContext:292): Root WebApplicationContext: initialization completed in 1225 ms
+20/12/2023 10:20:57.907 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_dev - Starting...
+20/12/2023 10:20:58.338 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_dev - Start completed.
+20/12/2023 10:20:58.338 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_postgres_ttsh_dev - Starting...
+20/12/2023 10:20:58.415 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_postgres_ttsh_dev - Start completed.
+20/12/2023 10:20:58.415 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_test - Starting...
+20/12/2023 10:20:58.460 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_test - Start completed.
+20/12/2023 10:20:59.157 INFO  [main] o.s.s.web.DefaultSecurityFilterChain (<init>:55): Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2e929182, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5423a17, org.springframework.security.web.context.SecurityContextPersistenceFilter@4d4b019e, org.springframework.security.web.header.HeaderWriterFilter@5e158f33, org.springframework.security.web.authentication.logout.LogoutFilter@3a2bb026, com.klkt.klktkotlin.webapi.auth.config.JwtAuthenticationFilter@637791d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@21280cbb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@36525ab, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@42ff9a77, org.springframework.security.web.session.SessionManagementFilter@6e948f1c, org.springframework.security.web.access.ExceptionTranslationFilter@35e07e19, org.springframework.security.web.access.intercept.AuthorizationFilter@50de907a]
+20/12/2023 10:20:59.255 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Starting ProtocolHandler ["http-nio-8088"]
+20/12/2023 10:20:59.289 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (start:220): Tomcat started on port(s): 8088 (http) with context path ''
+20/12/2023 10:20:59.473 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarted:61): Started KlktkotlinApplication.Companion in 3.695 seconds (JVM running for 5.229)
+20/12/2023 10:20:59.475 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:40): HELLO MR.KHOAI!
+20/12/2023 10:20:59.475 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:42): Active profiles: []
+20/12/2023 10:21:08.056 INFO  [http-nio-8088-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring DispatcherServlet 'dispatcherServlet'
+20/12/2023 10:21:08.056 INFO  [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet (initServletBean:525): Initializing Servlet 'dispatcherServlet'
+20/12/2023 10:21:08.058 INFO  [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet (initServletBean:547): Completed initialization in 0 ms
+20/12/2023 10:21:08.217 INFO  [http-nio-8088-exec-2] c.k.klktkotlin.webapi.TtshController (getData:40): TTSH Dev: {"name":"TTSH body"}
+20/12/2023 10:24:07.944 WARN  [db_postgres_ttsh_dev housekeeper] com.zaxxer.hikari.pool.HikariPool (run:787): db_postgres_ttsh_dev - Thread starvation or clock leap detected (housekeeper delta=1m51s721ms272µs600ns).
+20/12/2023 10:24:07.943 WARN  [db_oracle_e_ktt_test housekeeper] com.zaxxer.hikari.pool.HikariPool (run:787): db_oracle_e_ktt_test - Thread starvation or clock leap detected (housekeeper delta=1m51s722ms259µs400ns).
+20/12/2023 10:24:07.943 WARN  [db_oracle_e_ktt_dev housekeeper] com.zaxxer.hikari.pool.HikariPool (run:787): db_oracle_e_ktt_dev - Thread starvation or clock leap detected (housekeeper delta=1m51s723ms128µs900ns).
+20/12/2023 10:24:32.208 ERROR [http-nio-8088-exec-2] com.klkt.klktkotlin.repo.TtshRepo (getData:17): ERROR:
+20/12/2023 10:26:25.032 WARN  [main] o.s.b.l.logback.LogbackLoggingSystem (initialize:136): Ignoring 'logback.configurationFile' system property. Please use 'logging.config' instead.
+20/12/2023 10:26:25.085 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarting:55): Starting KlktkotlinApplication.Companion using Java 1.8.0_202 on DESKTOP-K4TI3L5 with PID 15592 (E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main started by giangtd-pc in E:\Projects\KLKT\klktkotlin)
+20/12/2023 10:26:25.086 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStartupProfileInfo:632): No active profile set, falling back to 1 default profile: "default"
+20/12/2023 10:26:26.114 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (initialize:108): Tomcat initialized with port(s): 8088 (http)
+20/12/2023 10:26:26.120 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Initializing ProtocolHandler ["http-nio-8088"]
+20/12/2023 10:26:26.121 INFO  [main] o.a.catalina.core.StandardService (log:173): Starting service [Tomcat]
+20/12/2023 10:26:26.121 INFO  [main] o.a.catalina.core.StandardEngine (log:173): Starting Servlet engine: [Apache Tomcat/9.0.82]
+20/12/2023 10:26:26.266 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring embedded WebApplicationContext
+20/12/2023 10:26:26.266 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext (prepareWebApplicationContext:292): Root WebApplicationContext: initialization completed in 1141 ms
+20/12/2023 10:26:26.638 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_dev - Starting...
+20/12/2023 10:26:27.045 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_dev - Start completed.
+20/12/2023 10:26:27.045 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_postgres_ttsh_dev - Starting...
+20/12/2023 10:26:27.113 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_postgres_ttsh_dev - Start completed.
+20/12/2023 10:26:27.114 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_test - Starting...
+20/12/2023 10:26:27.164 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_test - Start completed.
+20/12/2023 10:26:27.658 INFO  [main] o.s.s.web.DefaultSecurityFilterChain (<init>:55): Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@c1050f2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@67bb4dcd, org.springframework.security.web.context.SecurityContextPersistenceFilter@6b649efa, org.springframework.security.web.header.HeaderWriterFilter@6a32191e, org.springframework.security.web.authentication.logout.LogoutFilter@3cdc7b09, com.klkt.klktkotlin.webapi.auth.config.JwtAuthenticationFilter@4867ab9f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@36068727, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@73afe2b7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@738d37fc, org.springframework.security.web.session.SessionManagementFilter@6436e181, org.springframework.security.web.access.ExceptionTranslationFilter@29a33620, org.springframework.security.web.access.intercept.AuthorizationFilter@773014d3]
+20/12/2023 10:26:27.738 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Starting ProtocolHandler ["http-nio-8088"]
+20/12/2023 10:26:27.746 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (start:220): Tomcat started on port(s): 8088 (http) with context path ''
+20/12/2023 10:26:27.866 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarted:61): Started KlktkotlinApplication.Companion in 3.161 seconds (JVM running for 4.048)
+20/12/2023 10:26:27.869 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:40): HELLO MR.KHOAI!
+20/12/2023 10:26:27.869 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:42): Active profiles: []
+20/12/2023 10:26:34.735 INFO  [http-nio-8088-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring DispatcherServlet 'dispatcherServlet'
+20/12/2023 10:26:34.736 INFO  [http-nio-8088-exec-3] o.s.web.servlet.DispatcherServlet (initServletBean:525): Initializing Servlet 'dispatcherServlet'
+20/12/2023 10:26:34.737 INFO  [http-nio-8088-exec-3] o.s.web.servlet.DispatcherServlet (initServletBean:547): Completed initialization in 1 ms
+20/12/2023 10:26:34.876 INFO  [http-nio-8088-exec-3] c.k.klktkotlin.webapi.TtshController (getData:40): TTSH Dev: {"name":"TTSH body"}
+20/12/2023 10:26:34.890 INFO  [http-nio-8088-exec-3] com.klkt.klktkotlin.repo.TtshRepo (queryWithCommit:87): spText: {call pkg_auth_user___findbyid(?, ?) }
+20/12/2023 10:26:34.903 ERROR [http-nio-8088-exec-3] com.klkt.klktkotlin.repo.TtshRepo (getData:17): ERROR:
+20/12/2023 10:27:22.299 WARN  [main] o.s.b.l.logback.LogbackLoggingSystem (initialize:136): Ignoring 'logback.configurationFile' system property. Please use 'logging.config' instead.
+20/12/2023 10:27:22.375 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarting:55): Starting KlktkotlinApplication.Companion using Java 1.8.0_202 on DESKTOP-K4TI3L5 with PID 17192 (E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main started by giangtd-pc in E:\Projects\KLKT\klktkotlin)
+20/12/2023 10:27:22.375 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStartupProfileInfo:632): No active profile set, falling back to 1 default profile: "default"
+20/12/2023 10:27:23.551 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (initialize:108): Tomcat initialized with port(s): 8088 (http)
+20/12/2023 10:27:23.557 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Initializing ProtocolHandler ["http-nio-8088"]
+20/12/2023 10:27:23.559 INFO  [main] o.a.catalina.core.StandardService (log:173): Starting service [Tomcat]
+20/12/2023 10:27:23.559 INFO  [main] o.a.catalina.core.StandardEngine (log:173): Starting Servlet engine: [Apache Tomcat/9.0.82]
+20/12/2023 10:27:23.672 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring embedded WebApplicationContext
+20/12/2023 10:27:23.672 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext (prepareWebApplicationContext:292): Root WebApplicationContext: initialization completed in 1237 ms
+20/12/2023 10:27:24.073 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_dev - Starting...
+20/12/2023 10:27:24.475 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_dev - Start completed.
+20/12/2023 10:27:24.475 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_postgres_ttsh_dev - Starting...
+20/12/2023 10:27:24.563 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_postgres_ttsh_dev - Start completed.
+20/12/2023 10:27:24.564 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_test - Starting...
+20/12/2023 10:27:24.608 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_test - Start completed.
+20/12/2023 10:27:25.163 INFO  [main] o.s.s.web.DefaultSecurityFilterChain (<init>:55): Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2673487b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2d07aacc, org.springframework.security.web.context.SecurityContextPersistenceFilter@399f5daf, org.springframework.security.web.header.HeaderWriterFilter@15f519f7, org.springframework.security.web.authentication.logout.LogoutFilter@9e50283, com.klkt.klktkotlin.webapi.auth.config.JwtAuthenticationFilter@704067c6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@c4cceb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@118fbaf0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@ff5d4f1, org.springframework.security.web.session.SessionManagementFilter@410382cb, org.springframework.security.web.access.ExceptionTranslationFilter@43d3995f, org.springframework.security.web.access.intercept.AuthorizationFilter@586737ff]
+20/12/2023 10:27:25.259 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Starting ProtocolHandler ["http-nio-8088"]
+20/12/2023 10:27:25.270 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (start:220): Tomcat started on port(s): 8088 (http) with context path ''
+20/12/2023 10:27:25.409 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarted:61): Started KlktkotlinApplication.Companion in 3.453 seconds (JVM running for 4.161)
+20/12/2023 10:27:25.412 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:40): HELLO MR.KHOAI!
+20/12/2023 10:27:25.412 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:42): Active profiles: []
+20/12/2023 10:27:27.794 INFO  [http-nio-8088-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring DispatcherServlet 'dispatcherServlet'
+20/12/2023 10:27:27.795 INFO  [http-nio-8088-exec-4] o.s.web.servlet.DispatcherServlet (initServletBean:525): Initializing Servlet 'dispatcherServlet'
+20/12/2023 10:27:27.798 INFO  [http-nio-8088-exec-4] o.s.web.servlet.DispatcherServlet (initServletBean:547): Completed initialization in 2 ms
+20/12/2023 10:27:27.966 INFO  [http-nio-8088-exec-4] c.k.klktkotlin.webapi.TtshController (getData:40): TTSH Dev: {"name":"TTSH body"}
+20/12/2023 10:27:46.685 INFO  [http-nio-8088-exec-4] com.klkt.klktkotlin.repo.TtshRepo (queryWithCommit:87): spText: {call pkg_auth_user___findbyid(?, ?) }
+20/12/2023 10:28:51.852 WARN  [db_oracle_e_ktt_dev housekeeper] com.zaxxer.hikari.pool.HikariPool (run:787): db_oracle_e_ktt_dev - Thread starvation or clock leap detected (housekeeper delta=54s985ms871µs701ns).
+20/12/2023 10:28:51.852 WARN  [db_postgres_ttsh_dev housekeeper] com.zaxxer.hikari.pool.HikariPool (run:787): db_postgres_ttsh_dev - Thread starvation or clock leap detected (housekeeper delta=54s986ms382µs901ns).
+20/12/2023 10:30:47.628 WARN  [db_oracle_e_ktt_test housekeeper] com.zaxxer.hikari.pool.HikariPool (run:787): db_oracle_e_ktt_test - Thread starvation or clock leap detected (housekeeper delta=2m7s593ms527µs899ns).
+20/12/2023 10:30:47.630 WARN  [db_postgres_ttsh_dev housekeeper] com.zaxxer.hikari.pool.HikariPool (run:787): db_postgres_ttsh_dev - Thread starvation or clock leap detected (housekeeper delta=1m55s777ms699µs300ns).
+20/12/2023 10:30:47.628 WARN  [db_oracle_e_ktt_dev housekeeper] com.zaxxer.hikari.pool.HikariPool (run:787): db_oracle_e_ktt_dev - Thread starvation or clock leap detected (housekeeper delta=1m55s776ms772µs899ns).
+20/12/2023 10:30:59.061 ERROR [http-nio-8088-exec-4] com.klkt.klktkotlin.repo.TtshRepo (getData:17): ERROR:
+20/12/2023 10:33:11.868 WARN  [main] o.s.b.l.logback.LogbackLoggingSystem (initialize:136): Ignoring 'logback.configurationFile' system property. Please use 'logging.config' instead.
+20/12/2023 10:33:11.920 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarting:55): Starting KlktkotlinApplication.Companion using Java 1.8.0_202 on DESKTOP-K4TI3L5 with PID 5444 (E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main started by giangtd-pc in E:\Projects\KLKT\klktkotlin)
+20/12/2023 10:33:11.921 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStartupProfileInfo:632): No active profile set, falling back to 1 default profile: "default"
+20/12/2023 10:33:12.883 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (initialize:108): Tomcat initialized with port(s): 8088 (http)
+20/12/2023 10:33:12.887 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Initializing ProtocolHandler ["http-nio-8088"]
+20/12/2023 10:33:12.889 INFO  [main] o.a.catalina.core.StandardService (log:173): Starting service [Tomcat]
+20/12/2023 10:33:12.889 INFO  [main] o.a.catalina.core.StandardEngine (log:173): Starting Servlet engine: [Apache Tomcat/9.0.82]
+20/12/2023 10:33:13.035 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring embedded WebApplicationContext
+20/12/2023 10:33:13.036 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext (prepareWebApplicationContext:292): Root WebApplicationContext: initialization completed in 1078 ms
+20/12/2023 10:33:13.397 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_dev - Starting...
+20/12/2023 10:33:13.907 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_dev - Start completed.
+20/12/2023 10:33:13.907 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_postgres_ttsh_dev - Starting...
+20/12/2023 10:33:14.027 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_postgres_ttsh_dev - Start completed.
+20/12/2023 10:33:14.028 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_test - Starting...
+20/12/2023 10:33:14.096 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_test - Start completed.
+20/12/2023 10:33:14.617 INFO  [main] o.s.s.web.DefaultSecurityFilterChain (<init>:55): Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@34451ed8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@c1050f2, org.springframework.security.web.context.SecurityContextPersistenceFilter@7186b202, org.springframework.security.web.header.HeaderWriterFilter@5a90265a, org.springframework.security.web.authentication.logout.LogoutFilter@4cb957b8, com.klkt.klktkotlin.webapi.auth.config.JwtAuthenticationFilter@4867ab9f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@65ef48f2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@208205ed, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@67bb4dcd, org.springframework.security.web.session.SessionManagementFilter@e700eba, org.springframework.security.web.access.ExceptionTranslationFilter@62b57479, org.springframework.security.web.access.intercept.AuthorizationFilter@79e7188e]
+20/12/2023 10:33:14.703 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Starting ProtocolHandler ["http-nio-8088"]
+20/12/2023 10:33:14.712 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (start:220): Tomcat started on port(s): 8088 (http) with context path ''
+20/12/2023 10:33:14.880 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarted:61): Started KlktkotlinApplication.Companion in 3.406 seconds (JVM running for 4.403)
+20/12/2023 10:33:14.882 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:40): HELLO MR.KHOAI!
+20/12/2023 10:33:14.884 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:42): Active profiles: []
+20/12/2023 10:33:17.571 INFO  [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring DispatcherServlet 'dispatcherServlet'
+20/12/2023 10:33:17.572 INFO  [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet (initServletBean:525): Initializing Servlet 'dispatcherServlet'
+20/12/2023 10:33:17.573 INFO  [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet (initServletBean:547): Completed initialization in 1 ms
+20/12/2023 10:33:17.710 INFO  [http-nio-8088-exec-1] c.k.klktkotlin.webapi.TtshController (getData:40): TTSH Dev: {"name":"TTSH body"}
+20/12/2023 10:33:17.726 INFO  [http-nio-8088-exec-1] com.klkt.klktkotlin.repo.TtshRepo (queryWithCommit:87): spText: {call pkg_auth_user___findbyid(?, ?) }
+20/12/2023 10:33:17.743 ERROR [http-nio-8088-exec-1] com.klkt.klktkotlin.repo.TtshRepo (queryWithCommit:98): queryWithCommit exception: {}
+org.postgresql.util.PSQLException: ERROR: pkg_auth_user___findbyid(character varying) is a procedure
+  Hint: To call a procedure, use CALL.
+  Position: 15
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2674)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2364)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:354)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:484)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:404)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:162)
+	at org.postgresql.jdbc.PgCallableStatement.executeWithFlags(PgCallableStatement.java:83)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:151)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyCallableStatement.execute(HikariProxyCallableStatement.java)
+	at com.klkt.klktkotlin.database.rdbms.RDBMSDataContext.queryWithCommit(RDBMSDataContext.kt:92)
+	at com.klkt.klktkotlin.repo.TtshRepo.getData(TtshRepo.kt:12)
+	at com.klkt.klktkotlin.webapi.TtshController.getData(TtshController.kt:42)
+	at com.klkt.klktkotlin.webapi.TtshController$$FastClassBySpringCGLIB$$3488adad.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:792)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.doProceed(DelegatingIntroductionInterceptor.java:137)
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.invoke(DelegatingIntroductionInterceptor.java:124)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:707)
+	at com.klkt.klktkotlin.webapi.TtshController$$EnhancerBySpringCGLIB$$2594b1ba.getData(<generated>)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
-	... 23 common frames omitted
-19/12/2023 10:46:33.123 WARN  [main] o.s.b.l.logback.LogbackLoggingSystem (initialize:136): Ignoring 'logback.configurationFile' system property. Please use 'logging.config' instead.
-19/12/2023 10:46:33.165 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarting:55): Starting KlktkotlinApplication.Companion using Java 1.8.0_202 on DESKTOP-K4TI3L5 with PID 22504 (E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main started by giangtd-pc in E:\Projects\KLKT\klktkotlin)
-19/12/2023 10:46:33.166 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStartupProfileInfo:632): No active profile set, falling back to 1 default profile: "default"
-19/12/2023 10:46:34.204 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (initialize:108): Tomcat initialized with port(s): 8088 (http)
-19/12/2023 10:46:34.209 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Initializing ProtocolHandler ["http-nio-8088"]
-19/12/2023 10:46:34.211 INFO  [main] o.a.catalina.core.StandardService (log:173): Starting service [Tomcat]
-19/12/2023 10:46:34.212 INFO  [main] o.a.catalina.core.StandardEngine (log:173): Starting Servlet engine: [Apache Tomcat/9.0.82]
-19/12/2023 10:46:34.359 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring embedded WebApplicationContext
-19/12/2023 10:46:34.360 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext (prepareWebApplicationContext:292): Root WebApplicationContext: initialization completed in 1157 ms
-19/12/2023 10:46:34.745 INFO  [main] c.k.k.a.service.RouteMapperServics (init:40): =======>path: [error] /error
-19/12/2023 10:46:34.746 INFO  [main] c.k.k.a.service.RouteMapperServics (init:40): =======>path: [getData] /v1/dvc/get
-19/12/2023 10:46:34.746 INFO  [main] c.k.k.a.service.RouteMapperServics (init:40): =======>path: [uiConfiguration] /swagger-resources/configuration/ui
-19/12/2023 10:46:34.746 INFO  [main] c.k.k.a.service.RouteMapperServics (init:40): =======>path: [swaggerResources] /swagger-resources
-19/12/2023 10:46:34.746 INFO  [main] c.k.k.a.service.RouteMapperServics (init:40): =======>path: [getDocumentation] /v2/api-docs
-19/12/2023 10:46:34.746 INFO  [main] c.k.k.a.service.RouteMapperServics (init:40): =======>path: [errorHtml] /error
-19/12/2023 10:46:34.747 INFO  [main] c.k.k.a.service.RouteMapperServics (init:40): =======>path: [refreshAccessToken] /api/auth/refresh
-19/12/2023 10:46:34.747 INFO  [main] c.k.k.a.service.RouteMapperServics (init:40): =======>path: [getDocumentation] /v3/api-docs
-19/12/2023 10:46:34.747 INFO  [main] c.k.k.a.service.RouteMapperServics (init:40): =======>path: [getDataTest] /v1/dvc/get-test
-19/12/2023 10:46:34.747 INFO  [main] c.k.k.a.service.RouteMapperServics (init:40): =======>path: [securityConfiguration] /swagger-resources/configuration/security
-19/12/2023 10:46:34.747 INFO  [main] c.k.k.a.service.RouteMapperServics (init:40): =======>path: [authenticate] /api/auth
-19/12/2023 10:46:34.747 INFO  [main] c.k.k.a.service.RouteMapperServics (reload:63): Add permit router. id: 0 > /v2/api-docs
-19/12/2023 10:46:34.747 INFO  [main] c.k.k.a.service.RouteMapperServics (reload:63): Add permit router. id: 0 > /error
-19/12/2023 10:46:34.748 INFO  [main] c.k.k.a.service.RouteMapperServics (reload:63): Add permit router. id: 0 > /api/auth
-19/12/2023 10:46:34.748 INFO  [main] c.k.k.a.service.RouteMapperServics (reload:63): Add permit router. id: 0 > /api/auth/refresh
-19/12/2023 10:46:34.749 INFO  [main] c.k.k.a.service.RouteMapperServics (reload:63): Add permit router. id: 0 > /swagger-resources/configuration/ui
-19/12/2023 10:46:34.749 INFO  [main] c.k.k.a.service.RouteMapperServics (reload:63): Add permit router. id: 0 > /swagger-resources/configuration/security
-19/12/2023 10:46:34.749 INFO  [main] c.k.k.a.service.RouteMapperServics (reload:63): Add permit router. id: 0 > /v3/api-docs
-19/12/2023 10:46:34.749 INFO  [main] c.k.k.a.service.RouteMapperServics (reload:63): Add permit router. id: 0 > /swagger-resources
-19/12/2023 10:46:34.749 INFO  [main] c.k.k.a.service.RouteMapperServics (reload:63): Add permit router. id: 0 > /v1/dvc/get
-19/12/2023 10:46:34.749 INFO  [main] c.k.k.a.service.RouteMapperServics (reload:63): Add permit router. id: 0 > /v1/dvc/get-test
-19/12/2023 10:46:34.750 INFO  [main] c.k.k.a.service.RouteMapperServics (init:44): Load controller complete! total: 10
-19/12/2023 10:46:35.084 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_test - Starting...
-19/12/2023 10:46:35.472 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_test - Start completed.
-19/12/2023 10:46:35.472 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_dev - Starting...
-19/12/2023 10:46:35.518 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_dev - Start completed.
-19/12/2023 10:46:35.874 INFO  [main] o.s.s.web.DefaultSecurityFilterChain (<init>:55): Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@63f6bed1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7ef8eda7, org.springframework.security.web.context.SecurityContextPersistenceFilter@d88f893, org.springframework.security.web.header.HeaderWriterFilter@e91b4f4, org.springframework.security.web.authentication.logout.LogoutFilter@4214ae8f, com.klkt.klktkotlin.webapi.auth.config.JwtAuthenticationFilter@17c2d509, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@48eaf42f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@554188ac, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@115ca7de, org.springframework.security.web.session.SessionManagementFilter@4215e133, org.springframework.security.web.access.ExceptionTranslationFilter@1378eea2, org.springframework.security.web.access.intercept.AuthorizationFilter@3443e476]
-19/12/2023 10:46:35.970 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Starting ProtocolHandler ["http-nio-8088"]
-19/12/2023 10:46:35.980 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (start:220): Tomcat started on port(s): 8088 (http) with context path ''
-19/12/2023 10:46:36.125 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarted:61): Started KlktkotlinApplication.Companion in 3.279 seconds (JVM running for 3.925)
-19/12/2023 10:46:36.127 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:40): HELLO MR.KHOAI!
-19/12/2023 10:46:36.128 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:42): Active profiles: []
-19/12/2023 10:46:43.017 INFO  [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring DispatcherServlet 'dispatcherServlet'
-19/12/2023 10:46:43.017 INFO  [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet (initServletBean:525): Initializing Servlet 'dispatcherServlet'
-19/12/2023 10:46:43.018 INFO  [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet (initServletBean:547): Completed initialization in 1 ms
-19/12/2023 10:46:43.134 ERROR [http-nio-8088-exec-1] o.a.c.c.C.[.[.[.[dispatcherServlet] (log:175): Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
-io.jsonwebtoken.ExpiredJwtException: JWT expired 40674130 milliseconds ago at 2023-12-18T16:28:49.000Z. Current time: 2023-12-19T03:46:43.130Z. Allowed clock skew: 0 milliseconds.
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:682)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:362)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:94)
-	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:36)
-	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:29)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parseSignedClaims(DefaultJwtParser.java:821)
-	at com.klkt.klktkotlin.webapi.auth.service.TokenService.getAllClaims(TokenService.kt:53)
-	at com.klkt.klktkotlin.webapi.auth.service.TokenService.extractUsername(TokenService.kt:39)
-	at com.klkt.klktkotlin.webapi.auth.config.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.kt:33)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:96)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at com.klkt.klktkotlin.webapi.auth.config.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.kt:49)
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
 	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
@@ -434,17 +701,94 @@ io.jsonwebtoken.ExpiredJwtException: JWT expired 40674130 milliseconds ago at 20
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-19/12/2023 10:47:16.860 ERROR [http-nio-8088-exec-5] o.a.c.c.C.[.[.[.[dispatcherServlet] (log:175): Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
-io.jsonwebtoken.ExpiredJwtException: JWT expired 40966859 milliseconds ago at 2023-12-18T16:24:30.000Z. Current time: 2023-12-19T03:47:16.859Z. Allowed clock skew: 0 milliseconds.
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:682)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:362)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:94)
-	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:36)
-	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:29)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parseSignedClaims(DefaultJwtParser.java:821)
-	at com.klkt.klktkotlin.webapi.auth.service.TokenService.getAllClaims(TokenService.kt:53)
-	at com.klkt.klktkotlin.webapi.auth.service.TokenService.extractUsername(TokenService.kt:39)
-	at com.klkt.klktkotlin.webapi.auth.config.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.kt:33)
+20/12/2023 10:33:17.745 ERROR [http-nio-8088-exec-1] com.klkt.klktkotlin.repo.TtshRepo (getData:17): ERROR:
+20/12/2023 10:36:31.461 WARN  [main] o.s.b.l.logback.LogbackLoggingSystem (initialize:136): Ignoring 'logback.configurationFile' system property. Please use 'logging.config' instead.
+20/12/2023 10:36:31.511 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarting:55): Starting KlktkotlinApplication.Companion using Java 1.8.0_202 on DESKTOP-K4TI3L5 with PID 25576 (E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main started by giangtd-pc in E:\Projects\KLKT\klktkotlin)
+20/12/2023 10:36:31.511 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStartupProfileInfo:632): No active profile set, falling back to 1 default profile: "default"
+20/12/2023 10:36:32.461 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (initialize:108): Tomcat initialized with port(s): 8088 (http)
+20/12/2023 10:36:32.467 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Initializing ProtocolHandler ["http-nio-8088"]
+20/12/2023 10:36:32.468 INFO  [main] o.a.catalina.core.StandardService (log:173): Starting service [Tomcat]
+20/12/2023 10:36:32.468 INFO  [main] o.a.catalina.core.StandardEngine (log:173): Starting Servlet engine: [Apache Tomcat/9.0.82]
+20/12/2023 10:36:32.628 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring embedded WebApplicationContext
+20/12/2023 10:36:32.628 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext (prepareWebApplicationContext:292): Root WebApplicationContext: initialization completed in 1080 ms
+20/12/2023 10:36:32.979 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_dev - Starting...
+20/12/2023 10:36:33.364 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_dev - Start completed.
+20/12/2023 10:36:33.364 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_postgres_ttsh_dev - Starting...
+20/12/2023 10:36:33.429 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_postgres_ttsh_dev - Start completed.
+20/12/2023 10:36:33.429 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_test - Starting...
+20/12/2023 10:36:33.474 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_test - Start completed.
+20/12/2023 10:36:33.913 INFO  [main] o.s.s.web.DefaultSecurityFilterChain (<init>:55): Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@773014d3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7fedb795, org.springframework.security.web.context.SecurityContextPersistenceFilter@1fd7a37, org.springframework.security.web.header.HeaderWriterFilter@627ff1b8, org.springframework.security.web.authentication.logout.LogoutFilter@41b64020, com.klkt.klktkotlin.webapi.auth.config.JwtAuthenticationFilter@17a703f5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@58a84a12, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@65ef48f2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@10850d17, org.springframework.security.web.session.SessionManagementFilter@1039bfc4, org.springframework.security.web.access.ExceptionTranslationFilter@34414ffc, org.springframework.security.web.access.intercept.AuthorizationFilter@7364eed1]
+20/12/2023 10:36:33.989 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Starting ProtocolHandler ["http-nio-8088"]
+20/12/2023 10:36:33.998 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (start:220): Tomcat started on port(s): 8088 (http) with context path ''
+20/12/2023 10:36:34.119 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarted:61): Started KlktkotlinApplication.Companion in 3.067 seconds (JVM running for 4.436)
+20/12/2023 10:36:34.121 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:40): HELLO MR.KHOAI!
+20/12/2023 10:36:34.122 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:42): Active profiles: []
+20/12/2023 10:36:41.496 INFO  [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring DispatcherServlet 'dispatcherServlet'
+20/12/2023 10:36:41.496 INFO  [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet (initServletBean:525): Initializing Servlet 'dispatcherServlet'
+20/12/2023 10:36:41.497 INFO  [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet (initServletBean:547): Completed initialization in 0 ms
+20/12/2023 10:36:41.621 INFO  [http-nio-8088-exec-1] c.k.klktkotlin.webapi.TtshController (getData:40): TTSH Dev: {"name":"TTSH body"}
+20/12/2023 10:36:41.634 INFO  [http-nio-8088-exec-1] com.klkt.klktkotlin.repo.TtshRepo (queryWithCommit:87): spText: call pkg_auth_user___findbyid(?, ?) 
+20/12/2023 10:36:41.662 ERROR [http-nio-8088-exec-1] com.klkt.klktkotlin.repo.TtshRepo (queryWithCommit:98): queryWithCommit exception: {}
+org.postgresql.util.PSQLException: A CallableStatement function was executed and the out parameter 1 was of type java.sql.Types=2012 however type java.sql.Types=-10 was registered.
+	at org.postgresql.jdbc.PgCallableStatement.executeWithFlags(PgCallableStatement.java:146)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:151)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyCallableStatement.execute(HikariProxyCallableStatement.java)
+	at com.klkt.klktkotlin.database.rdbms.RDBMSDataContext.queryWithCommit(RDBMSDataContext.kt:92)
+	at com.klkt.klktkotlin.repo.TtshRepo.getData(TtshRepo.kt:12)
+	at com.klkt.klktkotlin.webapi.TtshController.getData(TtshController.kt:42)
+	at com.klkt.klktkotlin.webapi.TtshController$$FastClassBySpringCGLIB$$3488adad.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:792)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.doProceed(DelegatingIntroductionInterceptor.java:137)
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.invoke(DelegatingIntroductionInterceptor.java:124)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:707)
+	at com.klkt.klktkotlin.webapi.TtshController$$EnhancerBySpringCGLIB$$8e651149.getData(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:96)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at com.klkt.klktkotlin.webapi.auth.config.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.kt:49)
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
 	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
@@ -489,207 +833,32 @@ io.jsonwebtoken.ExpiredJwtException: JWT expired 40966859 milliseconds ago at 20
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-19/12/2023 10:47:26.093 INFO  [http-nio-8088-exec-6] c.k.k.authen.security.AuthenFilter (doFilterInternal:83): Denied access. ip: 0:0:0:0:0:0:0:1 - uri: /api/auth
-19/12/2023 10:47:44.330 INFO  [http-nio-8088-exec-7] c.k.k.authen.security.AuthenFilter (doFilterInternal:83): Denied access. ip: 0:0:0:0:0:0:0:1 - uri: /api/auth
-19/12/2023 10:49:03.943 WARN  [main] o.s.b.l.logback.LogbackLoggingSystem (initialize:136): Ignoring 'logback.configurationFile' system property. Please use 'logging.config' instead.
-19/12/2023 10:49:04.016 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarting:55): Starting KlktkotlinApplication.Companion using Java 1.8.0_202 on DESKTOP-K4TI3L5 with PID 11364 (E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main started by giangtd-pc in E:\Projects\KLKT\klktkotlin)
-19/12/2023 10:49:04.017 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStartupProfileInfo:632): No active profile set, falling back to 1 default profile: "default"
-19/12/2023 10:49:05.099 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (initialize:108): Tomcat initialized with port(s): 8088 (http)
-19/12/2023 10:49:05.106 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Initializing ProtocolHandler ["http-nio-8088"]
-19/12/2023 10:49:05.108 INFO  [main] o.a.catalina.core.StandardService (log:173): Starting service [Tomcat]
-19/12/2023 10:49:05.109 INFO  [main] o.a.catalina.core.StandardEngine (log:173): Starting Servlet engine: [Apache Tomcat/9.0.82]
-19/12/2023 10:49:05.290 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring embedded WebApplicationContext
-19/12/2023 10:49:05.290 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext (prepareWebApplicationContext:292): Root WebApplicationContext: initialization completed in 1225 ms
-19/12/2023 10:49:05.689 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_test - Starting...
-19/12/2023 10:49:06.099 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_test - Start completed.
-19/12/2023 10:49:06.100 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_dev - Starting...
-19/12/2023 10:49:06.146 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_dev - Start completed.
-19/12/2023 10:49:06.747 INFO  [main] o.s.s.web.DefaultSecurityFilterChain (<init>:55): Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@429aeac1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@79eeff87, org.springframework.security.web.context.SecurityContextPersistenceFilter@39de9bda, org.springframework.security.web.header.HeaderWriterFilter@7f323b3a, org.springframework.security.web.authentication.logout.LogoutFilter@a7cf42f, com.klkt.klktkotlin.webapi.auth.config.JwtAuthenticationFilter@2cfa2c4f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@52226e57, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6dee8ae6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6b4fc2d1, org.springframework.security.web.session.SessionManagementFilter@1ff15a50, org.springframework.security.web.access.ExceptionTranslationFilter@16132f21, org.springframework.security.web.access.intercept.AuthorizationFilter@f25f48a]
-19/12/2023 10:49:06.866 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Starting ProtocolHandler ["http-nio-8088"]
-19/12/2023 10:49:06.877 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (start:220): Tomcat started on port(s): 8088 (http) with context path ''
-19/12/2023 10:49:07.026 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarted:61): Started KlktkotlinApplication.Companion in 3.495 seconds (JVM running for 4.324)
-19/12/2023 10:49:07.029 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:40): HELLO MR.KHOAI!
-19/12/2023 10:49:07.029 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:42): Active profiles: []
-19/12/2023 10:49:14.521 INFO  [http-nio-8088-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring DispatcherServlet 'dispatcherServlet'
-19/12/2023 10:49:14.522 INFO  [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet (initServletBean:525): Initializing Servlet 'dispatcherServlet'
-19/12/2023 10:49:14.523 INFO  [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet (initServletBean:547): Completed initialization in 1 ms
-19/12/2023 10:49:53.859 ERROR [http-nio-8088-exec-6] o.a.c.c.C.[.[.[.[dispatcherServlet] (log:175): Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
-io.jsonwebtoken.ExpiredJwtException: JWT expired 40864853 milliseconds ago at 2023-12-18T16:28:49.000Z. Current time: 2023-12-19T03:49:53.853Z. Allowed clock skew: 0 milliseconds.
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:682)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:362)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:94)
-	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:36)
-	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:29)
-	at io.jsonwebtoken.impl.DefaultJwtParser.parseSignedClaims(DefaultJwtParser.java:821)
-	at com.klkt.klktkotlin.webapi.auth.service.TokenService.getAllClaims(TokenService.kt:53)
-	at com.klkt.klktkotlin.webapi.auth.service.TokenService.extractUsername(TokenService.kt:39)
-	at com.klkt.klktkotlin.webapi.auth.config.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.kt:33)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
-	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
-	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
-	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
-	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-19/12/2023 10:49:56.506 INFO  [http-nio-8088-exec-8] c.k.klktkotlin.webapi.DvcController (getData:41): objInput Dev: {"name":"Add your name in the body"}
-19/12/2023 11:16:08.240 WARN  [main] o.s.b.l.logback.LogbackLoggingSystem (initialize:136): Ignoring 'logback.configurationFile' system property. Please use 'logging.config' instead.
-19/12/2023 11:16:08.314 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarting:55): Starting KlktkotlinApplication.Companion using Java 1.8.0_202 on DESKTOP-K4TI3L5 with PID 8184 (E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main started by giangtd-pc in E:\Projects\KLKT\klktkotlin)
-19/12/2023 11:16:08.315 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStartupProfileInfo:632): No active profile set, falling back to 1 default profile: "default"
-19/12/2023 11:16:09.466 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (initialize:108): Tomcat initialized with port(s): 8088 (http)
-19/12/2023 11:16:09.471 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Initializing ProtocolHandler ["http-nio-8088"]
-19/12/2023 11:16:09.473 INFO  [main] o.a.catalina.core.StandardService (log:173): Starting service [Tomcat]
-19/12/2023 11:16:09.473 INFO  [main] o.a.catalina.core.StandardEngine (log:173): Starting Servlet engine: [Apache Tomcat/9.0.82]
-19/12/2023 11:16:09.655 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring embedded WebApplicationContext
-19/12/2023 11:16:09.656 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext (prepareWebApplicationContext:292): Root WebApplicationContext: initialization completed in 1257 ms
-19/12/2023 11:16:10.060 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_test - Starting...
-19/12/2023 11:16:10.516 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_test - Start completed.
-19/12/2023 11:16:10.516 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_dev - Starting...
-19/12/2023 11:16:10.571 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_dev - Start completed.
-19/12/2023 11:16:11.047 INFO  [main] o.s.s.web.DefaultSecurityFilterChain (<init>:55): Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@b9d018b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@429aeac1, org.springframework.security.web.context.SecurityContextPersistenceFilter@217c23ce, org.springframework.security.web.header.HeaderWriterFilter@70d77826, org.springframework.security.web.authentication.logout.LogoutFilter@51fc862e, com.klkt.klktkotlin.webapi.auth.config.JwtAuthenticationFilter@6c518474, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@47148f3f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7d528cf7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@79eeff87, org.springframework.security.web.session.SessionManagementFilter@214beff9, org.springframework.security.web.access.ExceptionTranslationFilter@27e2287c, org.springframework.security.web.access.intercept.AuthorizationFilter@54336976]
-19/12/2023 11:16:11.129 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Starting ProtocolHandler ["http-nio-8088"]
-19/12/2023 11:16:11.137 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (start:220): Tomcat started on port(s): 8088 (http) with context path ''
-19/12/2023 11:16:11.282 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarted:61): Started KlktkotlinApplication.Companion in 3.48 seconds (JVM running for 4.248)
-19/12/2023 11:16:11.284 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:40): HELLO MR.KHOAI!
-19/12/2023 11:16:11.284 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:42): Active profiles: []
-19/12/2023 11:16:23.018 INFO  [http-nio-8088-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring DispatcherServlet 'dispatcherServlet'
-19/12/2023 11:16:23.019 INFO  [http-nio-8088-exec-3] o.s.web.servlet.DispatcherServlet (initServletBean:525): Initializing Servlet 'dispatcherServlet'
-19/12/2023 11:16:23.019 INFO  [http-nio-8088-exec-3] o.s.web.servlet.DispatcherServlet (initServletBean:547): Completed initialization in 0 ms
-19/12/2023 11:16:23.161 INFO  [http-nio-8088-exec-3] c.k.klktkotlin.webapi.DvcController (getData:41): objInput Dev: {"name":"Add your name in the body"}
-19/12/2023 11:16:23.368 WARN  [http-nio-8088-exec-3] c.k.k.w.a.c.JwtAuthenticationFilter (makeErrorResponse:70): [INVALID REQUEST] response to client failed. {}
-java.lang.IllegalStateException: getOutputStream() has already been called for this response
-	at org.apache.catalina.connector.Response.getWriter(Response.java:572)
-	at org.apache.catalina.connector.ResponseFacade.getWriter(ResponseFacade.java:189)
-	at javax.servlet.ServletResponseWrapper.getWriter(ServletResponseWrapper.java:108)
-	at javax.servlet.ServletResponseWrapper.getWriter(ServletResponseWrapper.java:108)
-	at javax.servlet.ServletResponseWrapper.getWriter(ServletResponseWrapper.java:108)
-	at org.springframework.security.web.util.OnCommittedResponseWrapper.getWriter(OnCommittedResponseWrapper.java:156)
-	at com.klkt.klktkotlin.webapi.auth.config.JwtAuthenticationFilter.makeErrorResponse(JwtAuthenticationFilter.kt:68)
-	at com.klkt.klktkotlin.webapi.auth.config.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.kt:46)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
-	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
-	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
-	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
-	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-19/12/2023 11:16:40.143 ERROR [http-nio-8088-exec-1] c.k.k.w.auth.service.TokenService (getAllClaims:67): Invalid JWT signature: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
-19/12/2023 12:58:24.992 WARN  [main] o.s.b.l.logback.LogbackLoggingSystem (initialize:136): Ignoring 'logback.configurationFile' system property. Please use 'logging.config' instead.
-19/12/2023 12:58:25.056 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarting:55): Starting KlktkotlinApplication.Companion using Java 1.8.0_202 on DESKTOP-K4TI3L5 with PID 16080 (E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main started by giangtd-pc in E:\Projects\KLKT\klktkotlin)
-19/12/2023 12:58:25.057 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStartupProfileInfo:632): No active profile set, falling back to 1 default profile: "default"
-19/12/2023 12:58:26.295 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (initialize:108): Tomcat initialized with port(s): 8088 (http)
-19/12/2023 12:58:26.300 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Initializing ProtocolHandler ["http-nio-8088"]
-19/12/2023 12:58:26.302 INFO  [main] o.a.catalina.core.StandardService (log:173): Starting service [Tomcat]
-19/12/2023 12:58:26.302 INFO  [main] o.a.catalina.core.StandardEngine (log:173): Starting Servlet engine: [Apache Tomcat/9.0.82]
-19/12/2023 12:58:26.497 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring embedded WebApplicationContext
-19/12/2023 12:58:26.497 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext (prepareWebApplicationContext:292): Root WebApplicationContext: initialization completed in 1386 ms
-19/12/2023 12:58:26.912 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_test - Starting...
-19/12/2023 12:58:27.402 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_test - Start completed.
-19/12/2023 12:58:27.404 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_dev - Starting...
-19/12/2023 12:58:27.455 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_dev - Start completed.
-19/12/2023 12:58:27.949 INFO  [main] o.s.s.web.DefaultSecurityFilterChain (<init>:55): Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@b9d018b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@429aeac1, org.springframework.security.web.context.SecurityContextPersistenceFilter@217c23ce, org.springframework.security.web.header.HeaderWriterFilter@70d77826, org.springframework.security.web.authentication.logout.LogoutFilter@51fc862e, com.klkt.klktkotlin.webapi.auth.config.JwtAuthenticationFilter@6c518474, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@47148f3f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7d528cf7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@79eeff87, org.springframework.security.web.session.SessionManagementFilter@214beff9, org.springframework.security.web.access.ExceptionTranslationFilter@27e2287c, org.springframework.security.web.access.intercept.AuthorizationFilter@54336976]
-19/12/2023 12:58:28.038 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Starting ProtocolHandler ["http-nio-8088"]
-19/12/2023 12:58:28.046 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (start:220): Tomcat started on port(s): 8088 (http) with context path ''
-19/12/2023 12:58:28.188 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarted:61): Started KlktkotlinApplication.Companion in 3.588 seconds (JVM running for 4.468)
-19/12/2023 12:58:28.190 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:40): HELLO MR.KHOAI!
-19/12/2023 12:58:28.190 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:42): Active profiles: []
-19/12/2023 12:58:31.962 INFO  [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring DispatcherServlet 'dispatcherServlet'
-19/12/2023 12:58:31.963 INFO  [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet (initServletBean:525): Initializing Servlet 'dispatcherServlet'
-19/12/2023 12:58:31.965 INFO  [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet (initServletBean:547): Completed initialization in 2 ms
-19/12/2023 12:58:32.071 ERROR [http-nio-8088-exec-1] c.k.k.w.a.c.JwtAuthenticationFilter$Companion (doFilterInternal:55): Invalid JWT signature: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
-19/12/2023 12:59:09.436 WARN  [main] o.s.b.l.logback.LogbackLoggingSystem (initialize:136): Ignoring 'logback.configurationFile' system property. Please use 'logging.config' instead.
-19/12/2023 12:59:09.500 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarting:55): Starting KlktkotlinApplication.Companion using Java 1.8.0_202 on DESKTOP-K4TI3L5 with PID 16172 (E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main started by giangtd-pc in E:\Projects\KLKT\klktkotlin)
-19/12/2023 12:59:09.501 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStartupProfileInfo:632): No active profile set, falling back to 1 default profile: "default"
-19/12/2023 12:59:10.571 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (initialize:108): Tomcat initialized with port(s): 8088 (http)
-19/12/2023 12:59:10.579 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Initializing ProtocolHandler ["http-nio-8088"]
-19/12/2023 12:59:10.580 INFO  [main] o.a.catalina.core.StandardService (log:173): Starting service [Tomcat]
-19/12/2023 12:59:10.582 INFO  [main] o.a.catalina.core.StandardEngine (log:173): Starting Servlet engine: [Apache Tomcat/9.0.82]
-19/12/2023 12:59:10.759 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring embedded WebApplicationContext
-19/12/2023 12:59:10.759 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext (prepareWebApplicationContext:292): Root WebApplicationContext: initialization completed in 1215 ms
-19/12/2023 12:59:11.126 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_test - Starting...
-19/12/2023 12:59:11.532 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_test - Start completed.
-19/12/2023 12:59:11.532 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_dev - Starting...
-19/12/2023 12:59:11.577 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_dev - Start completed.
-19/12/2023 12:59:12.055 INFO  [main] o.s.s.web.DefaultSecurityFilterChain (<init>:55): Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7499eac7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5438c17a, org.springframework.security.web.context.SecurityContextPersistenceFilter@214beff9, org.springframework.security.web.header.HeaderWriterFilter@2cd388f5, org.springframework.security.web.authentication.logout.LogoutFilter@d611f1c, com.klkt.klktkotlin.webapi.auth.config.JwtAuthenticationFilter@6ecab872, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@217c23ce, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5fcd1c5f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@b9d018b, org.springframework.security.web.session.SessionManagementFilter@4e3e11b9, org.springframework.security.web.access.ExceptionTranslationFilter@3a401749, org.springframework.security.web.access.intercept.AuthorizationFilter@70a898b0]
-19/12/2023 12:59:12.173 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Starting ProtocolHandler ["http-nio-8088"]
-19/12/2023 12:59:12.194 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (start:220): Tomcat started on port(s): 8088 (http) with context path ''
-19/12/2023 12:59:12.373 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarted:61): Started KlktkotlinApplication.Companion in 3.281 seconds (JVM running for 4.283)
-19/12/2023 12:59:12.376 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:40): HELLO MR.KHOAI!
-19/12/2023 12:59:12.377 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:42): Active profiles: []
-19/12/2023 12:59:19.399 INFO  [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring DispatcherServlet 'dispatcherServlet'
-19/12/2023 12:59:19.399 INFO  [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet (initServletBean:525): Initializing Servlet 'dispatcherServlet'
-19/12/2023 12:59:19.400 INFO  [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet (initServletBean:547): Completed initialization in 1 ms
-19/12/2023 12:59:19.499 ERROR [http-nio-8088-exec-1] c.k.k.w.a.c.JwtAuthenticationFilter$Companion (doFilterInternal:55): Invalid JWT signature: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+20/12/2023 10:36:41.665 ERROR [http-nio-8088-exec-1] com.klkt.klktkotlin.repo.TtshRepo (getData:17): ERROR:
+20/12/2023 10:37:20.170 INFO  [http-nio-8088-exec-3] c.k.klktkotlin.webapi.DvcController (getData:41): objInput Dev: {"name":"Add your name in the body"}
+20/12/2023 10:39:53.143 WARN  [main] o.s.b.l.logback.LogbackLoggingSystem (initialize:136): Ignoring 'logback.configurationFile' system property. Please use 'logging.config' instead.
+20/12/2023 10:39:53.251 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarting:55): Starting KlktkotlinApplication.Companion using Java 1.8.0_202 on DESKTOP-K4TI3L5 with PID 14204 (E:\Projects\KLKT\klktkotlin\build\classes\kotlin\main started by giangtd-pc in E:\Projects\KLKT\klktkotlin)
+20/12/2023 10:39:53.252 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStartupProfileInfo:632): No active profile set, falling back to 1 default profile: "default"
+20/12/2023 10:39:54.577 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (initialize:108): Tomcat initialized with port(s): 8088 (http)
+20/12/2023 10:39:54.581 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Initializing ProtocolHandler ["http-nio-8088"]
+20/12/2023 10:39:54.582 INFO  [main] o.a.catalina.core.StandardService (log:173): Starting service [Tomcat]
+20/12/2023 10:39:54.582 INFO  [main] o.a.catalina.core.StandardEngine (log:173): Starting Servlet engine: [Apache Tomcat/9.0.82]
+20/12/2023 10:39:54.718 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring embedded WebApplicationContext
+20/12/2023 10:39:54.718 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext (prepareWebApplicationContext:292): Root WebApplicationContext: initialization completed in 1374 ms
+20/12/2023 10:39:55.139 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_dev - Starting...
+20/12/2023 10:39:55.621 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_dev - Start completed.
+20/12/2023 10:39:55.621 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_postgres_ttsh_dev - Starting...
+20/12/2023 10:39:55.720 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_postgres_ttsh_dev - Start completed.
+20/12/2023 10:39:55.721 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:80): db_oracle_e_ktt_test - Starting...
+20/12/2023 10:39:55.777 INFO  [main] com.zaxxer.hikari.HikariDataSource (<init>:82): db_oracle_e_ktt_test - Start completed.
+20/12/2023 10:39:56.302 INFO  [main] o.s.s.web.DefaultSecurityFilterChain (<init>:55): Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@26865482, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@34451ed8, org.springframework.security.web.context.SecurityContextPersistenceFilter@6436e181, org.springframework.security.web.header.HeaderWriterFilter@134f8ef6, org.springframework.security.web.authentication.logout.LogoutFilter@4a1a256d, com.klkt.klktkotlin.webapi.auth.config.JwtAuthenticationFilter@3531f3ca, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6b649efa, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@22bf9122, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@c1050f2, org.springframework.security.web.session.SessionManagementFilter@58a84a12, org.springframework.security.web.access.ExceptionTranslationFilter@627ff1b8, org.springframework.security.web.access.intercept.AuthorizationFilter@65514add]
+20/12/2023 10:39:56.394 INFO  [main] o.a.coyote.http11.Http11NioProtocol (log:173): Starting ProtocolHandler ["http-nio-8088"]
+20/12/2023 10:39:56.405 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer (start:220): Tomcat started on port(s): 8088 (http) with context path ''
+20/12/2023 10:39:56.545 INFO  [main] c.k.k.KlktkotlinApplication$Companion (logStarted:61): Started KlktkotlinApplication.Companion in 3.802 seconds (JVM running for 4.677)
+20/12/2023 10:39:56.548 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:40): HELLO MR.KHOAI!
+20/12/2023 10:39:56.548 INFO  [main] c.k.klktkotlin.KlktkotlinApplication (main:42): Active profiles: []
+20/12/2023 10:40:00.611 INFO  [http-nio-8088-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] (log:173): Initializing Spring DispatcherServlet 'dispatcherServlet'
+20/12/2023 10:40:00.611 INFO  [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet (initServletBean:525): Initializing Servlet 'dispatcherServlet'
+20/12/2023 10:40:00.612 INFO  [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet (initServletBean:547): Completed initialization in 1 ms
+20/12/2023 10:40:00.762 INFO  [http-nio-8088-exec-2] c.k.klktkotlin.webapi.DvcController (getData:41): objInput Dev: {"name":"Add your name in the body"}
+20/12/2023 10:40:08.313 INFO  [http-nio-8088-exec-6] c.k.klktkotlin.webapi.TtshController (getData:40): TTSH Dev: {"name":"TTSH body"}
+20/12/2023 10:40:08.317 INFO  [http-nio-8088-exec-6] com.klkt.klktkotlin.repo.TtshRepo (queryWithCommit:87): spText: call pkg_auth_user___findbyid(?, ?) 

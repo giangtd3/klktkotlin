@@ -2,21 +2,18 @@ package com.klkt.klktkotlin.webapi.auth.config
 
 import com.klkt.klktkotlin.webapi.auth.service.CustomUserDetailsService
 import com.klkt.klktkotlin.webapi.auth.service.TokenService
+import com.klkt.klktkotlin.webapi.auth.utils.AuthUtils.Companion.makeErrorResponse
 import io.jsonwebtoken.ExpiredJwtException
 import io.jsonwebtoken.MalformedJwtException
 import io.jsonwebtoken.SignatureException
 import io.jsonwebtoken.UnsupportedJwtException
 import org.slf4j.LoggerFactory
-import org.springframework.http.HttpStatus
-import org.springframework.http.MediaType
-import org.springframework.http.ResponseEntity
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken
 import org.springframework.security.core.context.SecurityContextHolder
 import org.springframework.security.core.userdetails.UserDetails
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource
 import org.springframework.stereotype.Component
 import org.springframework.web.filter.OncePerRequestFilter
-import java.lang.IllegalArgumentException
 import javax.servlet.FilterChain
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.http.HttpServletResponse
@@ -50,25 +47,26 @@ class JwtAuthenticationFilter(
                     updateContext(foundUser, request)
 
                 filterChain.doFilter(request, response)
+                return
             }
         } catch (e: SignatureException) {
-            log.error("Invalid JWT signature: {}", e.message)
-            errMsg = String.format("Invalid JWT signature: {}", e.message)
+            log.error("Invalid JWT signature: {}", e)
+            errMsg = "Invalid JWT signature: $e"
         } catch (e: MalformedJwtException) {
-            log.error("Invalid JWT token: {}", e.message)
-            errMsg = String.format("Invalid JWT token: {}", e.message)
+            log.error("Invalid JWT token: {}", e)
+            errMsg = "Invalid JWT token: $e"
         } catch (e: ExpiredJwtException) {
-            log.error("JWT token is expired: {}", e.message)
-            errMsg = String.format("JWT token is expired: {}", e.message)
+            log.error("JWT token is expired: {}", e)
+            errMsg = "JWT token is expired: $e"
         } catch (e: UnsupportedJwtException) {
-            log.error("JWT token is unsupported: {}", e.message)
-            errMsg = String.format("JWT token is unsupported: {}", e.message)
+            log.error("JWT token is unsupported: {}", e)
+            errMsg = "JWT token is unsupported: $e"
         } catch (e: IllegalArgumentException) {
-            log.error("JWT claims string is empty: {}", e.message)
-            errMsg = String.format("JWT claims string is empty: {}", e.message)
+            log.error("JWT claims string is empty: {}", e)
+            errMsg = "JWT claims string is empty: $e"
         } catch (e: Exception) {
-            log.error("Unknow error: {}", e.message)
-            errMsg = String.format("Unknow error: {}", e.message)
+            log.error("Unknow error: {}", e)
+            errMsg = "Unknow error: $e"
         }
 
         makeErrorResponse(response, errMsg)
@@ -87,34 +85,7 @@ class JwtAuthenticationFilter(
         SecurityContextHolder.getContext().authentication = authToken
     }
 
-    fun makeErrorResponse(response: HttpServletResponse, authError: String) {
-        try {
-            val message: ResponseEntity<String?> = makeErrorResponseMsg(authError)
-            response.status = message.statusCodeValue
-            response.contentType = MediaType.APPLICATION_JSON_VALUE
-            response.characterEncoding = "UTF-8"
-            response.writer.write(message.body)
-        } catch (e: Exception) {
-            logger.warn("[INVALID REQUEST] response to client failed. {}", e)
-        }
-    }
 
-    fun makeErrorResponseMsg(authError: String): ResponseEntity<String?> {
-        return when (authError) {
-            "TRUST_AUTH_TOKEN_INVALID" -> //                return new ResponseEntity<>("Error: Unauthorized"
-                //                        , HttpStatus.UNAUTHORIZED);
-                ResponseEntity<String?>(
-                        "TRUST_AUTH_TOKEN_INVALID", HttpStatus.OK)
-
-            "TRUST_AUTH_TOKEN_NULL_OR_EMPTY", "TRUST_AUTH_TOKEN_NOT_ACCEPT" -> //
-                ResponseEntity<String?>("TRUST_AUTH_TOKEN_NULL_OR_EMPTY, TRUST_AUTH_TOKEN_NOT_ACCEPT", HttpStatus.OK)
-
-            "ACCEPT_DENIED", "DEFAULT_EXCEPTION" ->
-                ResponseEntity<String?>("ACCEPT_DENIED, DEFAULT_EXCEPTION", HttpStatus.OK)
-
-            else -> ResponseEntity<String?>(authError, HttpStatus.OK)
-        }
-    }
     companion object {
         private val log = LoggerFactory.getLogger(this::class.java)
     }
