@@ -19,6 +19,7 @@ spring:
 ###2.DB CONFIG ###
 datasources:
    dbKttTest:
+      dbKey: dbKttTest
       dbType: oracle
       dbName: E_DVC
       driverClassName: oracle.jdbc.OracleDriver
@@ -30,6 +31,7 @@ datasources:
       poolName: db_oracle_e_ktt_dev
       createPool: true
    dbKttDev:
+      dbKey: dbKttDev
       dbType: oracle
       dbName: E_DVC
       driverClassName: oracle.jdbc.OracleDriver
@@ -41,6 +43,7 @@ datasources:
       poolName: db_oracle_e_ktt_test
       createPool: true
    dbttsh:
+      dbKey: dbttsh
       dbType: postgres
       dbName: mot_ttsh_dev
       driverClassName: org.postgresql.Driver
