@@ -2,6 +2,7 @@ package com.klkt.klktkotlin.database.rdbms
 
 import com.klkt.klktkotlin.utils.ContextUtils
 import KLKTJavaUtils.KLKTJsonObject
+import com.klkt.klktkotlin.utils.KLKTUtils
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import java.sql.CallableStatement
@@ -11,11 +12,19 @@ import java.sql.SQLException
 
 abstract class RDBMSDataContext : IRDBMSDataContext {
     protected val logger: Logger = LoggerFactory.getLogger(this.javaClass as Class<*>)
+    protected var propYAMLFlatMap: MutableMap<String, Any?> = HashMap()
+    private val FILE_NAME_PROP = "etc/application.yml"
 
     protected lateinit var dbKey: String
     protected lateinit var dbName: String
     protected lateinit var dbType: String
+    protected lateinit var poolName: String
     protected lateinit var dbConn: Connection
+
+    init {
+        this.propYAMLFlatMap = KLKTUtils.flattenedYaml(FILE_NAME_PROP, null)
+    }
+
     @Synchronized
     private fun getConn(): Connection {
         try {

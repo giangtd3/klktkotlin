@@ -59,7 +59,10 @@ dependencies {
             //https://khttp.readthedocs.io/en/latest/
             //https://www.baeldung.com/kotlin/khttp
             , 'org.danilopianini:khttp:1.4.2'
-
+            // https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml
+            ,'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.16.0'
+            ,'com.fasterxml.jackson.core:jackson-databind:2.16.0'
+            ,'org.yaml:snakeyaml:2.2'
 
     )
 }

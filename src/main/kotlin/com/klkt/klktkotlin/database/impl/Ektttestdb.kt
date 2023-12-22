@@ -4,8 +4,9 @@ import com.klkt.klktkotlin.database.rdbms.RDBMSDataContext
 
  open class Ektttestdb: RDBMSDataContext() {
     init {
-        this.dbName = "db_oracle_e_ktt_test"
-        this.dbType = "oracle"
-        this.dbKey = "dbKttTest"
+        this.dbName = this.propYAMLFlatMap["datasources.dbKttTest.dbName"].toString()
+        this.dbType = this.propYAMLFlatMap["datasources.dbKttTest.dbType ="].toString()
+        this.dbKey = this.propYAMLFlatMap["datasources.dbKttTest.dbKey"].toString()
+        this.poolName = this.propYAMLFlatMap["datasources.dbKttTest.poolName"].toString()
     }
 }
