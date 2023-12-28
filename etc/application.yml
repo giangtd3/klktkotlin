@@ -54,6 +54,18 @@ datasources:
       minimumIdle: 10
       poolName: db_postgres_ttsh_dev
       createPool: true
+   gplxTtsh:
+      dbKey: gplxTtsh
+      dbType: mssql
+      dbName: GPLX_TTSH
+      driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      jdbcUrl: jdbc:sqlserver://10.0.223.154:1433;databaseName=GPLX_TTSH;instanceName=MSSQLSERVER;encrypt=true;trustServerCertificate=true;
+      username: sa
+      password: 123456a@
+      maximumPoolSize: 10
+      minimumIdle: 10
+      poolName: db_sqlserver_gplx_ttsh
+      createPool: true
 
 ##3. Auth:
 jwt:

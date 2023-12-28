@@ -19,14 +19,14 @@ abstract class RDBMSDataContext : IRDBMSDataContext {
     protected lateinit var dbName: String
     protected lateinit var dbType: String
     protected lateinit var poolName: String
-    protected lateinit var dbConn: Connection
+    private lateinit var dbConn: Connection
 
     init {
         this.propYAMLFlatMap = KLKTUtils.flattenedYaml(FILE_NAME_PROP, null)
     }
 
     @Synchronized
-    private fun getConn(): Connection {
+    protected fun getConn(): Connection {
         try {
             return ContextUtils.getBean(RDBMSDataSource::class.java).dataPoolMap[this.dbKey]?.connection as Connection
         } catch (ex: Exception) {
@@ -34,6 +34,7 @@ abstract class RDBMSDataContext : IRDBMSDataContext {
             if (message == null || message.contains("Timed out waiting for a free available connection")) {
                 logger!!.error("[DB_ERROR] Can't get connection. Refresh pool......")
                 return ContextUtils.getBean(RDBMSDataSource::class.java).dataPoolMap[this.dbKey]?.connection as Connection
+
             }
             throw SQLException("Get Connection err!!! ", ex)
         }
@@ -89,9 +90,9 @@ abstract class RDBMSDataContext : IRDBMSDataContext {
                 this.commit(conn)
             } else {
                 val spText = RDBMSUtils.buildStoreExec(
-                        procedureOrSqlQuery,
-                        params.size,
-                        true
+                    procedureOrSqlQuery,
+                    params.size,
+                    true
                 )
                 logger.info("spText: {}", spText)
 
@@ -103,7 +104,7 @@ abstract class RDBMSDataContext : IRDBMSDataContext {
                 re = pre.getObject(params.size + 1) as ResultSet
             }
             RDBMSUtils.parseResultSetData(re, result)
-        }catch (e: Exception) {
+        } catch (e: Exception) {
             logger.error("queryWithCommit exception: {}", e)
         } finally {
             RDBMSUtils.close(re, pre, conn)

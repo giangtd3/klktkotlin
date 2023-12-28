@@ -43,7 +43,7 @@ class KLKTUtils {
 
         fun flattenedYaml(fileName: String, parentKey: String?): MutableMap<String, Any?> {
             val mapper = ObjectMapper(YAMLFactory())
-            val file = File("etc/application.yml")
+            val file = File(fileName)
             val filePath: String = file.getPath()
             logger.info("file: {}", filePath)
             val mapLoaded: Map<String, Any>? = mapper.readValue(file, Map::class.java) as Map<String, Any>?
@@ -114,7 +114,7 @@ class KLKTUtils {
 
         fun flattenedListYaml(fileName: String, parentKey: String?): MutableMap<String, Any?> {
             val mapper = ObjectMapper(YAMLFactory())
-            val file = File("etc/application.yml")
+            val file = File(fileName)
             val filePath: String = file.getPath()
             logger.info("file: {}", filePath)
             val mapLoaded: Map<String, Any>? = mapper.readValue(file, Map::class.java) as Map<String, Any>?

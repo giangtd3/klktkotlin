@@ -2,6 +2,8 @@ package com.klkt.klktkotlin
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory
+import com.klkt.klktkotlin.repo.GplxTtshRepo
+import com.klkt.klktkotlin.utils.ContextUtils
 import com.klkt.klktkotlin.utils.FileUtils
 import com.klkt.klktkotlin.utils.FlagUtils
 import com.klkt.klktkotlin.utils.KLKTUtils
@@ -58,6 +60,10 @@ class KlktkotlinApplication {
 
             val mapResult2 = KLKTUtils.flattenedListYaml("etc/application.yml", null)
             logger.info("mapResult2: {}", mapResult2)
+
+            val gplxTtshRepo: GplxTtshRepo = ContextUtils.getBean(GplxTtshRepo::class.java)
+            gplxTtshRepo.checkConn()
+
 
         }
 
